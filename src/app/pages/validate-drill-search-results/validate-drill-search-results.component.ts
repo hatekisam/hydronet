@@ -80,9 +80,22 @@ import { PrefferedSponsoredChoiceComponent } from '../../components/preffered-sp
           <div class="grid grid-cols-3 gap-5">
             <app-preffered-sponsored-choice
               *ngFor="let choi of prefferedSponsoredChoice"
-              [oneChoice] = "choi"
+              [oneChoice]="choi"
             />
           </div>
+        </div>
+      </div>
+      <div class="bg-[#FAFBFE] p-10">
+        <div class="flex justify-between ">
+          <div class="flex items-center border-2 border-[#E4E4E4] rounded-md px-2 w-[70%]">
+            <img src="../../../assets/search2.svg" alt="" class=" w-5 h-5 " />
+            <input type="text" placeholder="Søg efter bærbare" class="w-full px-4  py-2 outline-none bg-inherit" />
+          </div>
+          <button class="flex items-center gap-2  rounded-md bg-[#39B6CC] text-white px-4 py-1">
+            <img src="../../../assets/swap.svg" alt="" class="w-5 h-5" />
+            <p>Sammenlign</p>
+            <p class="bg-[#2D68FF] px-1 p-0.5 text-[10px] rounded-full">2</p>
+          </button>
         </div>
       </div>
     </div>
