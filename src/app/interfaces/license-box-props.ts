@@ -1,7 +1,7 @@
 export interface LicenseBoxProps {
   image: string;
   title: string;
-  subTitle: string;
+  activities: number;
   tags: string[];
   rating: number;
   reviews: number;

@@ -2,11 +2,17 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { PrefferedSponsoredChoice } from '../../interfaces/preffered-sponsored-choice';
 import { PrefferedSponsoredChoiceComponent } from '../../components/preffered-sponsored-choice/preffered-sponsored-choice.component';
+import { LicenseBoxProps } from '../../interfaces/license-box-props';
+import { LicenseBoxComponent } from '../../components/license-box/license-box.component';
 
 @Component({
   selector: 'app-validate-drill-search-results',
   standalone: true,
-  imports: [CommonModule, PrefferedSponsoredChoiceComponent],
+  imports: [
+    CommonModule,
+    PrefferedSponsoredChoiceComponent,
+    LicenseBoxComponent,
+  ],
   template: `
     <div>
       <div class="bg-[#E7F4F5]">
@@ -87,15 +93,34 @@ import { PrefferedSponsoredChoiceComponent } from '../../components/preffered-sp
       </div>
       <div class="bg-[#FAFBFE] p-10">
         <div class="flex justify-between ">
-          <div class="flex items-center border-2 border-[#E4E4E4] rounded-md px-2 w-[70%]">
+          <div
+            class="flex items-center border-2 border-[#E4E4E4] rounded-md px-2 w-[70%]"
+          >
             <img src="../../../assets/search2.svg" alt="" class=" w-5 h-5 " />
-            <input type="text" placeholder="Søg efter bærbare" class="w-full px-4  py-2 outline-none bg-inherit" />
+            <input
+              type="text"
+              placeholder="Søg efter bærbare"
+              class="w-full px-4  py-2 outline-none bg-inherit"
+            />
           </div>
-          <button class="flex items-center gap-2  rounded-md bg-[#39B6CC] text-white px-4 py-1">
+          <button
+            class="flex items-center gap-2  rounded-md bg-[#39B6CC] text-white px-4 py-1"
+          >
             <img src="../../../assets/swap.svg" alt="" class="w-5 h-5" />
             <p>Sammenlign</p>
             <p class="bg-[#2D68FF] px-1 p-0.5 text-[10px] rounded-full">2</p>
           </button>
+        </div>
+      </div>
+      <div class="flex gap-5 bg-[#FAFBFE] p-5">
+        <div class="w-[20%] bg-white rounded-lg">Filter</div>
+        <div class="w-[80%] bg-white rounded-md p-4">
+          <div class="grid grid-cols-2 gap-5">
+            <app-license-box
+              *ngFor="let choi of licenseBoxList"
+              [oneChoice]="choi"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -143,6 +168,108 @@ export class ValidateDrillSearchResultsComponent {
         { image: 'path/to/tagImage6.jpg', title: 'Other Tag 6' },
       ],
       body: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.',
+    },
+  ];
+  licenseBoxList: LicenseBoxProps[] = [
+    {
+      image: 'url/to/image1.jpg',
+      title: 'License 1',
+      activities:120,
+      tags: ['Tag1', 'Tag2'],
+      rating: 4.5,
+      reviews: 120,
+      lever: 3,
+      body: 'Description of License 1.Sed do eiusmod tempor incididunt ut labore et dolore magna aliquaSed do eiusmod tempor incididunt ut labore et dolore magna aliquaSed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+    },
+    {
+      image: 'url/to/image2.jpg',
+      title: 'License 2',
+      activities:134,
+      tags: ['Tag3', 'Tag4'],
+      rating: 3.8,
+      reviews: 80,
+      lever: 2,
+      body: 'Description of License 2.Sed do eiusmod tempor incididunt ut labore et dolore magna aliquaSed do eiusmod tempor incididunt ut labore et dolore magna aliquaSed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+    },
+    {
+      image: 'url/to/image1.jpg',
+      title: 'License 1',
+      activities:120,
+      tags: ['Tag1', 'Tag2'],
+      rating: 4.5,
+      reviews: 120,
+      lever: 3,
+      body: 'Description of License 1.Sed do eiusmod tempor incididunt ut labore et dolore magna aliquaSed do eiusmod tempor incididunt ut labore et dolore magna aliquaSed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+    },
+    {
+      image: 'url/to/image2.jpg',
+      title: 'License 2',
+      activities:134,
+      tags: ['Tag3', 'Tag4'],
+      rating: 3.8,
+      reviews: 80,
+      lever: 2,
+      body: 'Description of License 2.Sed do eiusmod tempor incididunt ut labore et dolore magna aliquaSed do eiusmod tempor incididunt ut labore et dolore magna aliquaSed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+    },
+    {
+      image: 'url/to/image1.jpg',
+      title: 'License 1',
+      activities:120,
+      tags: ['Tag1', 'Tag2'],
+      rating: 4.5,
+      reviews: 120,
+      lever: 3,
+      body: 'Description of License 1.Sed do eiusmod tempor incididunt ut labore et dolore magna aliquaSed do eiusmod tempor incididunt ut labore et dolore magna aliquaSed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+    },
+    {
+      image: 'url/to/image2.jpg',
+      title: 'License 2',
+      activities:134,
+      tags: ['Tag3', 'Tag4'],
+      rating: 3.8,
+      reviews: 80,
+      lever: 2,
+      body: 'Description of License 2.Sed do eiusmod tempor incididunt ut labore et dolore magna aliquaSed do eiusmod tempor incididunt ut labore et dolore magna aliquaSed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+    },
+    {
+      image: 'url/to/image1.jpg',
+      title: 'License 1',
+      activities:120,
+      tags: ['Tag1', 'Tag2'],
+      rating: 4.5,
+      reviews: 120,
+      lever: 3,
+      body: 'Description of License 1.Sed do eiusmod tempor incididunt ut labore et dolore magna aliquaSed do eiusmod tempor incididunt ut labore et dolore magna aliquaSed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+    },
+    {
+      image: 'url/to/image2.jpg',
+      title: 'License 2',
+      activities:134,
+      tags: ['Tag3', 'Tag4'],
+      rating: 3.8,
+      reviews: 80,
+      lever: 2,
+      body: 'Description of License 2.Sed do eiusmod tempor incididunt ut labore et dolore magna aliquaSed do eiusmod tempor incididunt ut labore et dolore magna aliquaSed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+    },
+    {
+      image: 'url/to/image1.jpg',
+      title: 'License 1',
+      activities:120,
+      tags: ['Tag1', 'Tag2'],
+      rating: 4.5,
+      reviews: 120,
+      lever: 3,
+      body: 'Description of License 1.Sed do eiusmod tempor incididunt ut labore et dolore magna aliquaSed do eiusmod tempor incididunt ut labore et dolore magna aliquaSed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+    },
+    {
+      image: 'url/to/image2.jpg',
+      title: 'License 2',
+      activities:134,
+      tags: ['Tag3', 'Tag4'],
+      rating: 3.8,
+      reviews: 80,
+      lever: 2,
+      body: 'Description of License 2.Sed do eiusmod tempor incididunt ut labore et dolore magna aliquaSed do eiusmod tempor incididunt ut labore et dolore magna aliquaSed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
     },
   ];
 }
