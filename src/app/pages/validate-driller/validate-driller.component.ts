@@ -22,7 +22,7 @@ import { Component } from '@angular/core';
         needs.
       </p>
       <div class="p-3 rounded-xl bg-[#D1F4F7] border  my-4">
-        <div class="flex justify-between items-center gap-20">
+        <div class="flex justify-between items-center gap-20 mb-4">
           <div class="flex items-center gap-2 font-bold text-xl">
             <p>FIND</p>
             <p>|</p>
@@ -36,8 +36,30 @@ import { Component } from '@angular/core';
           </div>
         </div>
         <div class="flex items-center">
-          <div class="flex items-center gap-2">
-            
+          <div class="flex items-center gap-2 border-r border-r-black border-2 border-gray-700 bg-white py-1 px-2 rounded-l-full h-[100%]">
+            <img src="../../../assets/locFil.svg" alt=""  class="w-7 h-7" />
+            <select class="bg-white outline-none py-2" >
+              <option>Location</option>
+              <option>Location</option>
+              <option>Location</option>
+              <option>Location</option>
+            </select>
+          </div>
+          <div
+            class="flex items-center gap-2 border-l border-l-black border-2 border-gray-700 bg-white py-1 px-2 rounded-r-full h-[50px]"
+          >
+            <img src="../../../assets/locFil.svg" alt="" class="w-7 h-7"  />
+            <input
+              type="text"
+              placeholder="UIDD"
+              class="border-none outline-none px-4 py-2"
+            />
+            <button
+              class="flex items-center gap-2 px-4 py-1 bg-[#63CCD3] rounded-full text-white font-bold"
+            >
+              <img src="../../../assets/search.svg" alt="" class="w-7 h-7" />
+              <p>Search</p>
+            </button>
           </div>
         </div>
       </div>
