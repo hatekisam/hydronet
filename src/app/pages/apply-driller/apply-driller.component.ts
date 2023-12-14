@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   imports: [],
   template: `
     <div
-      class=" bg-[url('/assets/homeImage.png')] h-screen w-screen flex items-center justify-center flex-col px-28"
+      class=" bg-[url('/assets/homeImage.png')]  bg-no-repeat  bg-cover  h-screen w-screen flex items-center justify-center flex-col px-28"
     >
       <p class="my-5 text-[#96E8EE] text-4xl font-extrabold">
         Borehole Driller License Renewal
@@ -17,7 +17,7 @@ import { Component } from '@angular/core';
         Drillers.
       </p>
       <div
-        class="w-[80%] bg-[rgba(98,204,211,0.75)] p-5 flex items-center rounded-3xl gap-5"
+        class="bg-[rgba(98,204,211,0.75)] p-5 flex items-center rounded-3xl gap-5"
       >
         <div class="flex  gap-2">
           <div
