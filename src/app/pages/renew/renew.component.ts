@@ -39,12 +39,42 @@ import { Component } from '@angular/core';
           </button>
         </div>
       </div>
-      <div class="w-[80%] bg-[rgba(98,204,211,0.75)] p-5 flex items-center">
+      <div class="w-[80%] bg-[rgba(98,204,211,0.75)] p-5 flex items-center rounded-3xl gap-5">
+        <div class="flex  gap-2">
+          <div
+            class="p-2 rounded-full bg-gradient-to-r from-[#D3FFE7] to-[#EFFFF6] w-14 h-14 flex items-center justify-center"
+          >
+            <img src="../../../assets/people.svg" alt="" class="w-9 h-9" />
+          </div>
+          <div>
+            <p class="text-white text-xs font-bold">Total Driller Licesnse</p>
+            <p class="text-[#235C66] text-xl font-bold">6,000</p>
+            <p class="text-[#C6E0FF] text-sm">
+              <span class="text-[#2190A4]">16%</span> this month
+            </p>
+          </div>
+        </div>
+        <div class="h-full w-0.5 bg-[#F0F0F0]"></div>
+        <div class="flex items-center gap-2">
+          <div
+            class="p-2 rounded-full bg-gradient-to-r from-[#D3FFE7] to-[#EFFFF6] w-14 h-14 flex items-center justify-center"
+          >
+            <img src="../../../assets/people.svg" alt=""  class="w-9 h-9" />
+          </div>
+          <div>
+            <p class="text-white text-xs font-bold">Active License</p>
+            <p class="text-[#235C66] text-xl font-bold">6,000</p>
+            <p class="text-[#C6E0FF]">
+              <span class="text-[#2190A4]">16%</span>this month
+            </p>
+          </div>
+        </div>
+        <div class="h-full w-0.5 bg-[#F0F0F0]"></div>
         <div class="flex items-center">
           <div
-            class="p-2 rounded-full bg-gradient-to-r from-[#D3FFE7] to-[#EFFFF6]"
+            class="p-2 rounded-full bg-gradient-to-r from-[#D3FFE7] to-[#EFFFF6] w-14 h-14 flex items-center justify-center"
           >
-            <img src="../../../assets/people.svg" alt="" />
+            <img src="../../../assets/people.svg" alt=""  class="w-9 h-9" />
           </div>
           <div>
             <p class="text-white text-xs font-bold">Total Driller Licesnse</p>
@@ -54,12 +84,12 @@ import { Component } from '@angular/core';
             </p>
           </div>
         </div>
-        <div class="h-full w-1 bg-red-500"></div>
+        <div class="h-full w-0.5 bg-[#F0F0F0]"></div>
         <div class="flex items-center">
           <div
-            class="p-2 rounded-full bg-gradient-to-r from-[#D3FFE7] to-[#EFFFF6]"
+            class="p-2 rounded-full bg-gradient-to-r from-[#D3FFE7] to-[#EFFFF6] w-14 h-14 flex items-center justify-center"
           >
-            <img src="../../../assets/people.svg" alt="" />
+            <img src="../../../assets/people.svg" alt=""  class="w-9 h-9" />
           </div>
           <div>
             <p class="text-white text-xs font-bold">Total Driller Licesnse</p>
@@ -69,37 +99,6 @@ import { Component } from '@angular/core';
             </p>
           </div>
         </div>
-        <div class="h-full w-1 bg-red-500"></div>
-        <div class="flex items-center">
-          <div
-            class="p-2 rounded-full bg-gradient-to-r from-[#D3FFE7] to-[#EFFFF6]"
-          >
-            <img src="../../../assets/people.svg" alt="" />
-          </div>
-          <div>
-            <p class="text-white text-xs font-bold">Total Driller Licesnse</p>
-            <p class="text-[#235C66] text-xl font-bold">6,000</p>
-            <p class="text-[#C6E0FF]">
-              <span class="text-[#2190A4]">16%</span>this month
-            </p>
-          </div>
-        </div>
-        <div class="h-full w-1 bg-red-500"></div>
-        <div class="flex items-center">
-          <div
-            class="p-2 rounded-full bg-gradient-to-r from-[#D3FFE7] to-[#EFFFF6]"
-          >
-            <img src="../../../assets/people.svg" alt="" />
-          </div>
-          <div>
-            <p class="text-white text-xs font-bold">Total Driller Licesnse</p>
-            <p class="text-[#235C66] text-xl font-bold">6,000</p>
-            <p class="text-[#C6E0FF]">
-              <span class="text-[#2190A4]">16%</span>this month
-            </p>
-          </div>
-        </div>
-        <div class="h-full w-1 bg-red-500"></div>
       </div>
     </div>
   `,
