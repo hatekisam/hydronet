@@ -5,12 +5,104 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   template: `
-    <p>
-      renew works!
-    </p>
+    <div
+      class=" bg-[url('/assets/homeImage.png')] h-screen w-screen flex items-center justify-center flex-col px-28"
+    >
+      <p class="my-5 text-[#96E8EE] text-4xl font-extrabold">
+        Borehole Driller License Renewal
+        <span class="text-[#19B6D1]">Lagos State</span>
+      </p>
+      <p class="text-[#CBE8EA]  text-2xl font-extrabold my-3">
+        LSWRC Renewal Borehole drilling must be carried out by certified
+        Drillers.
+      </p>
+      <p class="text-[#CAE8EA]">
+        Enter you Lagos State Water Regulatory Commssions’ Issued Identification
+        Number
+      </p>
+      <div class="p-3 rounded-xl bg-[#D1F4F7] border  my-4">
+        <p class="text-xl text-[#262729] font-bold">License Renewal</p>
+        <div
+          class="flex items-center gap-2  border-2 border-gray-700 bg-white py-1 px-2 rounded-full h-[50px] pl-5"
+        >
+          <img src="../../../assets/locFil.svg" alt="" class="w-7 h-7" />
+          <input
+            type="text"
+            placeholder="Enter Your LSWRCUID"
+            class="border-none outline-none px-4 py-2"
+          />
+          <button
+            class="flex items-center gap-2 px-4 py-1 bg-[#63CCD3] rounded-full text-white font-bold"
+          >
+            <img src="../../../assets/search.svg" alt="" class="w-7 h-7" />
+            <p>Search</p>
+          </button>
+        </div>
+      </div>
+      <div class="w-[80%] bg-[rgba(98,204,211,0.75)] p-5 flex items-center">
+        <div class="flex items-center">
+          <div
+            class="p-2 rounded-full bg-gradient-to-r from-[#D3FFE7] to-[#EFFFF6]"
+          >
+            <img src="../../../assets/people.svg" alt="" />
+          </div>
+          <div>
+            <p class="text-white text-xs font-bold">Total Driller Licesnse</p>
+            <p class="text-[#235C66] text-xl font-bold">6,000</p>
+            <p class="text-[#C6E0FF]">
+              <span class="text-[#2190A4]">16%</span>this month
+            </p>
+          </div>
+        </div>
+        <div class="h-full w-1 bg-red-500"></div>
+        <div class="flex items-center">
+          <div
+            class="p-2 rounded-full bg-gradient-to-r from-[#D3FFE7] to-[#EFFFF6]"
+          >
+            <img src="../../../assets/people.svg" alt="" />
+          </div>
+          <div>
+            <p class="text-white text-xs font-bold">Total Driller Licesnse</p>
+            <p class="text-[#235C66] text-xl font-bold">6,000</p>
+            <p class="text-[#C6E0FF]">
+              <span class="text-[#2190A4]">16%</span>this month
+            </p>
+          </div>
+        </div>
+        <div class="h-full w-1 bg-red-500"></div>
+        <div class="flex items-center">
+          <div
+            class="p-2 rounded-full bg-gradient-to-r from-[#D3FFE7] to-[#EFFFF6]"
+          >
+            <img src="../../../assets/people.svg" alt="" />
+          </div>
+          <div>
+            <p class="text-white text-xs font-bold">Total Driller Licesnse</p>
+            <p class="text-[#235C66] text-xl font-bold">6,000</p>
+            <p class="text-[#C6E0FF]">
+              <span class="text-[#2190A4]">16%</span>this month
+            </p>
+          </div>
+        </div>
+        <div class="h-full w-1 bg-red-500"></div>
+        <div class="flex items-center">
+          <div
+            class="p-2 rounded-full bg-gradient-to-r from-[#D3FFE7] to-[#EFFFF6]"
+          >
+            <img src="../../../assets/people.svg" alt="" />
+          </div>
+          <div>
+            <p class="text-white text-xs font-bold">Total Driller Licesnse</p>
+            <p class="text-[#235C66] text-xl font-bold">6,000</p>
+            <p class="text-[#C6E0FF]">
+              <span class="text-[#2190A4]">16%</span>this month
+            </p>
+          </div>
+        </div>
+        <div class="h-full w-1 bg-red-500"></div>
+      </div>
+    </div>
   `,
-  styleUrl: './renew.component.css'
+  styleUrl: './renew.component.css',
 })
-export class RenewComponent {
-
-}
+export class RenewComponent {}
