@@ -30,7 +30,7 @@ export class HomeSidebarComponent {
     {
       title: 'Apply for Driller License',
       icon: '/assets/homeSideIcon.svg',
-      to: '',
+      to: 'apply-driller',
     },
     {
       title: 'Apply for Borehole Permit',

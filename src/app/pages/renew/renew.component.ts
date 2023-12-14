@@ -62,40 +62,40 @@ import { Component } from '@angular/core';
             <img src="../../../assets/people.svg" alt=""  class="w-9 h-9" />
           </div>
           <div>
-            <p class="text-white text-xs font-bold">Active License</p>
-            <p class="text-[#235C66] text-xl font-bold">6,000</p>
-            <p class="text-[#C6E0FF]">
-              <span class="text-[#2190A4]">16%</span>this month
+            <p class="text-white text-xs font-bold">Active Licesnse</p>
+            <p class="text-[#235C66] text-xl font-bold">1823</p>
+            <p class="text-[#C6E0FF] text-sm">
+              <span class="text-[#D0004B]">16%</span>this month
             </p>
           </div>
         </div>
         <div class="h-full w-0.5 bg-[#F0F0F0]"></div>
-        <div class="flex items-center">
+        <div class="flex items-center gap-2">
           <div
             class="p-2 rounded-full bg-gradient-to-r from-[#D3FFE7] to-[#EFFFF6] w-14 h-14 flex items-center justify-center"
           >
             <img src="../../../assets/people.svg" alt=""  class="w-9 h-9" />
           </div>
           <div>
-            <p class="text-white text-xs font-bold">Total Driller Licesnse</p>
-            <p class="text-[#235C66] text-xl font-bold">6,000</p>
-            <p class="text-[#C6E0FF]">
-              <span class="text-[#2190A4]">16%</span>this month
+            <p class="text-white text-xs font-bold">Expired Licesnse</p>
+            <p class="text-[#235C66] text-xl font-bold">1823</p>
+            <p class="text-[#C6E0FF] text-sm">
+              <span class="text-[#D0004B]">16%</span>this month
             </p>
           </div>
         </div>
         <div class="h-full w-0.5 bg-[#F0F0F0]"></div>
-        <div class="flex items-center">
+        <div class="flex items-center gap-2">
           <div
             class="p-2 rounded-full bg-gradient-to-r from-[#D3FFE7] to-[#EFFFF6] w-14 h-14 flex items-center justify-center"
           >
-            <img src="../../../assets/people.svg" alt=""  class="w-9 h-9" />
+            <img src="../../../assets/drillers.svg" alt=""  class="w-9 h-9" />
           </div>
           <div>
-            <p class="text-white text-xs font-bold">Total Driller Licesnse</p>
-            <p class="text-[#235C66] text-xl font-bold">6,000</p>
-            <p class="text-[#C6E0FF]">
-              <span class="text-[#2190A4]">16%</span>this month
+            <p class="text-white text-xs font-bold">Active Drillers</p>
+            <p class="text-[#235C66] text-xl font-bold">1823</p>
+            <p class="text-[#C6E0FF] text-sm">
+              <span class="text-[#D0004B]">16%</span>this month
             </p>
           </div>
         </div>
