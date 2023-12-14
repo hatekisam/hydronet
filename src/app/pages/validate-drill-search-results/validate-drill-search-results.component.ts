@@ -74,7 +74,7 @@ import { Component } from '@angular/core';
         </div>
         <div class=" h-2 bg-[#39B6CC] mx-5 rounded-full"></div>
         <div class="p-2">
-          <p class="font-medium">Prefered & Sponsored Choice </p>
+          <p class="font-medium">Prefered & Sponsored Choice</p>
         </div>
       </div>
     </div>
