@@ -1,44 +1,46 @@
 import { Component } from '@angular/core';
+import { HomeSideLink } from '../../interfaces/home-side-link';
+import { HomeSidebarLinkComponent } from '../home-sidebar-link/home-sidebar-link.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-home-sidebar',
   standalone: true,
-  imports: [],
+  imports: [HomeSidebarLinkComponent, CommonModule],
   template: `
     <div class="absolute left-0 top-1/2 transform -translate-y-1/2">
-      <div
-        class="border-4 border-[#39B6CC] rounded-r-3xl h-[400px] w-[100px]"
-      ></div>
+      <div class="border-4 border-[#39B6CC] rounded-r-3xl  w-[100px]">
+        <app-home-sidebar-link *ngFor="let link of links" [link]="link" />
+      </div>
     </div>
   `,
-  styleUrl: './home-sidebar.component.css',
 })
 export class HomeSidebarComponent {
-  links = [
+  links: HomeSideLink[] = [
     {
       title: 'Validate Driller Permit',
       icon: '/assets/homeSideIcon.svg',
-      link: '',
+      to: '',
     },
     {
       title: 'Renew Permit',
       icon: '/assets/homeSideIcon.svg',
-      link: 'renew',
+      to: 'renew',
     },
     {
       title: 'Apply for Driller License',
       icon: '/assets/homeSideIcon.svg',
-      link: '',
+      to: '',
     },
     {
       title: 'Apply for Borehole Permit',
       icon: '/assets/homeSideIcon.svg',
-      link: '',
+      to: '',
     },
     {
       title: 'Request Water Test/Analysis',
       icon: '/assets/homeSideIcon.svg',
-      link: '',
+      to: '',
     },
   ];
 }
