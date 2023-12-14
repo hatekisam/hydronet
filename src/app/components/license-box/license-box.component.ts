@@ -11,9 +11,9 @@ import { CommonModule } from '@angular/common';
       <p class=" font-bold text-[#043924] my-2">
         {{ oneChoice.title }}
       </p>
-      <div class="flex justify-between items-center gap-5">
-        <img [src]="oneChoice.image" [alt]="oneChoice.title" />
-        <div>
+      <div class="flex justify-between items-center gap-3">
+        <img [src]="oneChoice.image" [alt]="oneChoice.title" class="w-[50%]" />
+        <div class="w-full">
           <div class="flex flex-wrap items-center gap-2">
             <p
               class="text-white px-2 bg-[#62CCD3] rounded-full text-xs p-1"
@@ -22,7 +22,7 @@ import { CommonModule } from '@angular/common';
               {{ tag }}
             </p>
           </div>
-          <p class="text-center font-bold text-[#043924] my-1 text-xl">
+          <p class="font-bold text-[#043924] my-1 text-xl">
             {{ oneChoice.activities }} BoreHole Activities
           </p>
           <p>LSWRC Compliance Grading</p>
