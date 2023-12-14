@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
   template: `
     <div class="w-screen">
       <div class="h-4 w-full bg-[#63CCD3]"></div>
-      <div class="px-20 py-2">
+      <div class="px-20 py-2 bg-white">
         <div class="flex justify-between">
           <div class="flex items-center gap-4">
             <a href="" class="flex gap-2 items-center">

@@ -81,15 +81,15 @@ import { LicenseBoxComponent } from '../../components/license-box/license-box.co
           </div>
         </div>
         <div class=" h-1 bg-[#39B6CC] mx-5 rounded-full"></div>
-        <div class="p-4">
-          <p class="font-medium">Prefered & Sponsored Choice</p>
-          <div class="grid grid-cols-3 gap-5">
-            <app-preffered-sponsored-choice
-              *ngFor="let choi of prefferedSponsoredChoice"
-              [oneChoice]="choi"
-            />
-          </div>
-        </div>
+          <!-- <div class="p-4">
+            <p class="font-medium">Prefered & Sponsored Choice</p>
+            <div class="grid grid-cols-3 gap-5">
+              <app-preffered-sponsored-choice
+                *ngFor="let choi of prefferedSponsoredChoice"
+                [oneChoice]="choi"
+              />
+            </div>
+          </div> -->
       </div>
       <div class="bg-[#FAFBFE] p-10">
         <div class="flex justify-between ">
@@ -135,47 +135,7 @@ export class ValidateDrillSearchResultsComponent {
     this.displayWay = way;
   }
 
-  prefferedSponsoredChoice: PrefferedSponsoredChoice[] = [
-    {
-      image: '../../../assets/licenseImage.png',
-      title: 'Preferred Choice 1',
-      subTitle: 'Subtitle for Choice 1',
-      tags: ['Tag1', 'Tag2', 'Tag3'],
-      otherTags: [
-        { image: '../../../assets/otherTab1.png', title: 'Other Tag 1' },
-        { image: '../../../assets/otherTab2.png', title: 'Other Tag 2' },
-        { image: '../../../assets/otherTab3.png', title: 'Other Tag 2' },
-        { image: '../../../assets/otherTab4.png', title: 'Other Tag 2' },
-      ],
-      body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    },
-    {
-      image: '../../../assets/licenseImage.png',
-      title: 'Preferred Choice 2',
-      subTitle: 'Subtitle for Choice 2',
-      tags: ['Tag4', 'Tag5', 'Tag6'],
-      otherTags: [
-        { image: '../../../assets/otherTab1.png', title: 'Other Tag 1' },
-        { image: '../../../assets/otherTab2.png', title: 'Other Tag 2' },
-        { image: '../../../assets/otherTab3.png', title: 'Other Tag 2' },
-        { image: '../../../assets/otherTab4.png', title: 'Other Tag 2' },
-      ],
-      body: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    },
-    {
-      image: '../../../assets/licenseImage.png',
-      title: 'Preferred Choice 3',
-      subTitle: 'Subtitle for Choice 3',
-      tags: ['Tag7', 'Tag8', 'Tag9'],
-      otherTags: [
-        { image: '../../../assets/otherTab1.png', title: 'Other Tag 1' },
-        { image: '../../../assets/otherTab2.png', title: 'Other Tag 2' },
-        { image: '../../../assets/otherTab3.png', title: 'Other Tag 2' },
-        { image: '../../../assets/otherTab4.png', title: 'Other Tag 2' },
-      ],
-      body: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.',
-    },
-  ];
+
   licenseBoxList: LicenseBoxProps[] = [
     {
       image: '../../../assets/licenseImage.png',

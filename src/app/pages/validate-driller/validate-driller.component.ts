@@ -1,17 +1,20 @@
 import { Component } from '@angular/core';
+import { PrefferedSponsoredChoiceComponent } from '../../components/preffered-sponsored-choice/preffered-sponsored-choice.component';
+import { PrefferedSponsoredChoice } from '../../interfaces/preffered-sponsored-choice';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-validate-driller',
   standalone: true,
-  imports: [],
+  imports: [PrefferedSponsoredChoiceComponent,CommonModule],
   template: `
     <div
-      class=" bg-[url('/assets/homeImage.png')] h-screen w-screen flex items-center justify-center flex-col px-28"
+      class=" bg-[url('/assets/homeImage.png')]  w-screen "
     >
-      <div
-        class="absolute bg-[rgba(1,18,19,0.71)] w-screen h-screen bg-opacity-600"
-      ></div>
-      <div class="z-20 w-full flex items-center justify-center flex-col">
+      <!-- <div
+        class="absolute bg-[rgba(1,18,19,0.71)] w-screen h-screen bg-opacity-600 top-0 left-0"
+      ></div> -->
+      <div class="z-20 h-screen w-full flex items-center justify-center flex-col  px-28 ">
         <p class="my-5 text-[#96E8EE] text-4xl font-extrabold">
           Explore Licensed Borehole Expert in
           <span class="text-[#19B6D1]">Lagos State</span>
@@ -70,8 +73,61 @@ import { Component } from '@angular/core';
           </div>
         </div>
       </div>
+      <div class="bg-[#B5E0E8]  p-5">
+        <div class="p-4">
+          <p class="font-medium">Prefered & Sponsored Choice</p>
+          <div class="grid grid-cols-3 gap-5">
+            <app-preffered-sponsored-choice
+              *ngFor="let choi of prefferedSponsoredChoice"
+              [oneChoice]="choi"
+            />
+          </div>
+        </div>
+      </div>
     </div>
   `,
   styleUrl: './validate-driller.component.css',
 })
-export class ValidateDrillerComponent {}
+export class ValidateDrillerComponent {
+  prefferedSponsoredChoice: PrefferedSponsoredChoice[] = [
+    {
+      image: '../../../assets/licenseImage.png',
+      title: 'Preferred Choice 1',
+      subTitle: 'Subtitle for Choice 1',
+      tags: ['Tag1', 'Tag2', 'Tag3'],
+      otherTags: [
+        { image: '../../../assets/otherTab1.png', title: 'Other Tag 1' },
+        { image: '../../../assets/otherTab2.png', title: 'Other Tag 2' },
+        { image: '../../../assets/otherTab3.png', title: 'Other Tag 2' },
+        { image: '../../../assets/otherTab4.png', title: 'Other Tag 2' },
+      ],
+      body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    },
+    {
+      image: '../../../assets/licenseImage.png',
+      title: 'Preferred Choice 2',
+      subTitle: 'Subtitle for Choice 2',
+      tags: ['Tag4', 'Tag5', 'Tag6'],
+      otherTags: [
+        { image: '../../../assets/otherTab1.png', title: 'Other Tag 1' },
+        { image: '../../../assets/otherTab2.png', title: 'Other Tag 2' },
+        { image: '../../../assets/otherTab3.png', title: 'Other Tag 2' },
+        { image: '../../../assets/otherTab4.png', title: 'Other Tag 2' },
+      ],
+      body: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    },
+    {
+      image: '../../../assets/licenseImage.png',
+      title: 'Preferred Choice 3',
+      subTitle: 'Subtitle for Choice 3',
+      tags: ['Tag7', 'Tag8', 'Tag9'],
+      otherTags: [
+        { image: '../../../assets/otherTab1.png', title: 'Other Tag 1' },
+        { image: '../../../assets/otherTab2.png', title: 'Other Tag 2' },
+        { image: '../../../assets/otherTab3.png', title: 'Other Tag 2' },
+        { image: '../../../assets/otherTab4.png', title: 'Other Tag 2' },
+      ],
+      body: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.',
+    },
+  ];
+}
