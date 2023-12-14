@@ -9,7 +9,7 @@ import { CommonModule } from '@angular/common';
   imports: [HomeSidebarLinkComponent, CommonModule],
   template: `
     <div class="absolute left-0 top-1/2 transform -translate-y-1/2">
-      <div class="border-4 border-[#39B6CC] rounded-r-3xl  w-[100px]">
+      <div class="border-4 border-[#39B6CC] rounded-r-3xl  w-[100px] bg-white">
         <app-home-sidebar-link *ngFor="let link of links" [link]="link" />
       </div>
     </div>

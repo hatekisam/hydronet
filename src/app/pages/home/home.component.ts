@@ -7,7 +7,7 @@ import { HomeSidebarComponent } from '../../components/home-sidebar/home-sidebar
   standalone: true,
   imports: [RouterOutlet, HomeSidebarComponent],
   template: `
-    <div class="w-full h-full overflow-hidden">
+    <div class="w-screen h-screen overflow-hidden">
       <app-home-sidebar />
       <router-outlet></router-outlet>
     </div>
