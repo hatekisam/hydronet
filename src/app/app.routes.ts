@@ -35,7 +35,7 @@ export const routes: Routes = [
     ],
   },
   {
-    path: 'validate-drill/search',
+    path: 'search',
     component: ValidateDrillSearchResultsComponent,
   },
 ];

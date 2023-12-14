@@ -2,19 +2,26 @@ import { Component } from '@angular/core';
 import { PrefferedSponsoredChoiceComponent } from '../../components/preffered-sponsored-choice/preffered-sponsored-choice.component';
 import { PrefferedSponsoredChoice } from '../../interfaces/preffered-sponsored-choice';
 import { CommonModule } from '@angular/common';
+import { FooterComponent } from '../../components/footer/footer.component';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-validate-driller',
   standalone: true,
-  imports: [PrefferedSponsoredChoiceComponent,CommonModule],
+  imports: [
+    PrefferedSponsoredChoiceComponent,
+    CommonModule,
+    FooterComponent,
+    RouterLink,
+  ],
   template: `
-    <div
-      class=" bg-[url('/assets/homeImage.png')]  w-screen "
-    >
+    <div class=" bg-[url('/assets/homeImage.png')]  w-screen ">
       <!-- <div
         class="absolute bg-[rgba(1,18,19,0.71)] w-screen h-screen bg-opacity-600 top-0 left-0"
       ></div> -->
-      <div class="z-20 h-screen w-full flex items-center justify-center flex-col  px-28 ">
+      <div
+        class="z-20 h-screen w-full flex items-center justify-center flex-col  px-28 "
+      >
         <p class="my-5 text-[#96E8EE] text-4xl font-extrabold">
           Explore Licensed Borehole Expert in
           <span class="text-[#19B6D1]">Lagos State</span>
@@ -63,12 +70,13 @@ import { CommonModule } from '@angular/common';
                 placeholder="UIDD"
                 class="border-none outline-none px-4 py-2"
               />
-              <button
+              <a
+                [routerLink]="'search'"
                 class="flex items-center gap-2 px-4 py-1 bg-[#63CCD3] rounded-full text-white font-bold"
               >
                 <img src="../../../assets/search.svg" alt="" class="w-7 h-7" />
                 <p>Search</p>
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -84,6 +92,7 @@ import { CommonModule } from '@angular/common';
           </div>
         </div>
       </div>
+      <app-footer />
     </div>
   `,
   styleUrl: './validate-driller.component.css',
