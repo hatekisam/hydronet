@@ -1,10 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { PrefferedSponsoredChoice } from '../../interfaces/preffered-sponsored-choice';
+import { PrefferedSponsoredChoiceComponent } from '../../components/preffered-sponsored-choice/preffered-sponsored-choice.component';
 
 @Component({
   selector: 'app-validate-drill-search-results',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, PrefferedSponsoredChoiceComponent],
   template: `
     <div>
       <div class="bg-[#E7F4F5]">
@@ -72,9 +74,15 @@ import { Component } from '@angular/core';
             </ng-template>
           </div>
         </div>
-        <div class=" h-2 bg-[#39B6CC] mx-5 rounded-full"></div>
-        <div class="p-2">
+        <div class=" h-1 bg-[#39B6CC] mx-5 rounded-full"></div>
+        <div class="p-4">
           <p class="font-medium">Prefered & Sponsored Choice</p>
+          <div class="grid grid-cols-3 gap-5">
+            <app-preffered-sponsored-choice
+              *ngFor="let choi of prefferedSponsoredChoice"
+              [oneChoice] = "choi"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -88,4 +96,40 @@ export class ValidateDrillSearchResultsComponent {
   changeDisplayWay(way: 'grid' | 'list') {
     this.displayWay = way;
   }
+
+  prefferedSponsoredChoice: PrefferedSponsoredChoice[] = [
+    {
+      image: 'path/to/image1.jpg',
+      title: 'Preferred Choice 1',
+      subTitle: 'Subtitle for Choice 1',
+      tags: ['Tag1', 'Tag2', 'Tag3'],
+      otherTags: [
+        { image: 'path/to/tagImage1.jpg', title: 'Other Tag 1' },
+        { image: 'path/to/tagImage2.jpg', title: 'Other Tag 2' },
+      ],
+      body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    },
+    {
+      image: 'path/to/image2.jpg',
+      title: 'Preferred Choice 2',
+      subTitle: 'Subtitle for Choice 2',
+      tags: ['Tag4', 'Tag5', 'Tag6'],
+      otherTags: [
+        { image: 'path/to/tagImage3.jpg', title: 'Other Tag 3' },
+        { image: 'path/to/tagImage4.jpg', title: 'Other Tag 4' },
+      ],
+      body: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    },
+    {
+      image: 'path/to/image3.jpg',
+      title: 'Preferred Choice 3',
+      subTitle: 'Subtitle for Choice 3',
+      tags: ['Tag7', 'Tag8', 'Tag9'],
+      otherTags: [
+        { image: 'path/to/tagImage5.jpg', title: 'Other Tag 5' },
+        { image: 'path/to/tagImage6.jpg', title: 'Other Tag 6' },
+      ],
+      body: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.',
+    },
+  ];
 }
