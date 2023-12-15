@@ -9,7 +9,7 @@ import { LicenseBoxComponent } from '../../components/license-box/license-box.co
   template: `
     <div>
       <img src="../../assets/renewLicense.png" alt="" />
-      <div class="bg-[#39B6CC]"></div>
+      <div class="bg-[#39B6CC] px-10 py-5"></div>
       <div class="flex justify-between px-3 bg-[rgb(98,204,211)]">
         <p class="text-[#0A2540] text-[27px] ">{{ licenseData.id }}</p>
         <div class="flex items-center gap-2">
@@ -39,26 +39,53 @@ import { LicenseBoxComponent } from '../../components/license-box/license-box.co
       </div>
       <div class="bg-[#FAFBFE] px-4 flex gap-4 w-full">
         <div class="w-[20%] bg-white rounded-md">fadsf</div>
-        <div class="w-[80%] bg-white rounded-md p-4 flex gap-4">
-          <app-license-box [oneChoice]="licenseData.data" class="w-[50%]" />
-          <div class="w-[50%] p-3 shadow-sm">
-            <p class="text-[#043924] text-[20px] font-bold my-2"></p>
-            <div class="flex gap-3 h-full">
-              <div class="h-full w-[40%]"></div>
-              <div class="h-[150px] w-1 bg-[#148A92]"></div>
-              <div class="flex flex-col justify-between">
-                <div>
-                  <p class="text-[#596574] text-sm">Total Renewals 6</p>
-                </div>
-                <div class="flex justify-end w-full">
-                  <button
-                    class="bg-[#148A92] px-4 py-1 rounded-md text-white text-[13px] font-bold"
-                  >
-                    Renew License
-                  </button>
+        <div class="w-[80%]">
+          <div class=" bg-white rounded-md p-4 flex gap-4">
+            <app-license-box [oneChoice]="licenseData.data" class="w-[50%]" />
+            <div class="w-[50%] p-3 shadow-sm">
+              <p class="text-[#043924] text-[20px] font-bold my-2"></p>
+              <div class="flex gap-3 h-full">
+                <div class="h-full w-[30%]"></div>
+                <div class="h-[150px] w-1 bg-[#148A92]"></div>
+                <div class="flex flex-col justify-between">
+                  <div>
+                    <p class="text-[#596574] text-sm my-1">Total Renewals 6</p>
+                    <div class="flex items-center gap-2 my-1">
+                      <p class="text-[#596574] text-sm">License Expiry Date</p>
+                      <div
+                        class="px-2 bg-[#F36262] font-bold text-sm text-white rounded-full"
+                      >
+                        12th Feburary 2024
+                      </div>
+                    </div>
+                    <div class="flex items-center gap-2 my-1">
+                      <p class="text-[#596574] text-sm">Location rating</p>
+                      <div class="flex gap-2">
+                        <img src="../../../assets/star.svg" alt="" />
+                        <img src="../../../assets/star.svg" alt="" />
+                        <img src="../../../assets/star.svg" alt="" />
+                        <img src="../../../assets/star.svg" alt="" />
+                        <img src="../../../assets/star.svg" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex justify-end w-full mb-3">
+                    <button
+                      class="bg-[#148A92] px-4 py-1 rounded-md text-white text-[13px] font-bold"
+                    >
+                      Renew License
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
+          </div>
+          <div class="px-2 py-4">
+            <button
+              class="w-full py-2 bg-[#39B6CC] border-2 border-[#E7F4F5]  text-2xl  font-bold text-white rounded-3xl"
+            >
+              Renew License
+            </button>
           </div>
         </div>
       </div>
