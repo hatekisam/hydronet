@@ -1,6 +1,7 @@
 interface OtherTag {
   image: string;
   title: string;
+  number:number;
 }
 
 export interface PrefferedSponsoredChoice {
