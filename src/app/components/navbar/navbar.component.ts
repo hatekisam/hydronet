@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   template: `
-    <div class="w-screen">
+    <div class="">
       <div class="h-4 w-full bg-[#63CCD3]"></div>
       <div class="px-20 py-2 bg-white">
         <div class="flex justify-between">

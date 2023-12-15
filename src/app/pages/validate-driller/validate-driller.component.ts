@@ -15,10 +15,8 @@ import { RouterLink } from '@angular/router';
     RouterLink,
   ],
   template: `
-    <div class="  w-screen ">
-      <!-- <div
-        class="absolute bg-[rgba(1,18,19,0.71)] w-screen h-screen bg-opacity-600 top-0 left-0"
-      ></div> -->
+    <div class="   bg-red-500  relative ">
+      <div class="absolute"></div>
       <div
         class="z-20 h-screen w-full flex items-center justify-center flex-col  px-28  bg-[url('/assets/homeImage.png')]  bg-no-repeat bg-cover "
       >

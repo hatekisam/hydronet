@@ -5,10 +5,9 @@ import { HomeSidebarComponent } from '../../components/home-sidebar/home-sidebar
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [RouterOutlet, HomeSidebarComponent],
+  imports: [RouterOutlet],
   template: `
-    <div class="w-screen overflow-hidden">
-      <app-home-sidebar />
+    <div class="relative">
       <router-outlet></router-outlet>
     </div>
   `,

@@ -7,7 +7,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
   selector: 'app-root',
   standalone: true,
   imports: [CommonModule, RouterOutlet, NavbarComponent],
-  template: `<main>
+  template: `<main class="w-screen h-screen overflow-x-hidden">
     <app-navbar></app-navbar>
     <router-outlet></router-outlet>
   </main>`,
