@@ -28,7 +28,7 @@ import { CommonModule } from '@angular/common';
           <p>LSWRC Compliance Grading</p>
         </div>
       </div>
-      <div class="my-2">
+      <div class="my-2 text-[#525967] text-[11px]">
         <div *ngIf="oneChoice.body.length >= 150; else fullBody">
           <p>{{ oneChoice.body.slice(0, 150) }}</p>
           <a href="" class="text-gray-400">more</a>

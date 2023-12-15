@@ -40,7 +40,26 @@ import { LicenseBoxComponent } from '../../components/license-box/license-box.co
       <div class="bg-[#FAFBFE] px-4 flex gap-4 w-full">
         <div class="w-[20%] bg-white rounded-md">fadsf</div>
         <div class="w-[80%] bg-white rounded-md p-4 flex gap-4">
-          <app-license-box [oneChoice]="licenseData.data" />
+          <app-license-box [oneChoice]="licenseData.data" class="w-[50%]" />
+          <div class="w-[50%] p-3 shadow-sm">
+            <p class="text-[#043924] text-[20px] font-bold my-2"></p>
+            <div class="flex gap-3 h-full">
+              <div class="h-full w-[40%]"></div>
+              <div class="h-[150px] w-1 bg-[#148A92]"></div>
+              <div class="flex flex-col justify-between">
+                <div>
+                  <p class="text-[#596574] text-sm">Total Renewals 6</p>
+                </div>
+                <div class="flex justify-end w-full">
+                  <button
+                    class="bg-[#148A92] px-4 py-1 rounded-md text-white text-[13px] font-bold"
+                  >
+                    Renew License
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
