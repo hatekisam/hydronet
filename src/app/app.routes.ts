@@ -6,6 +6,7 @@ import { ApplyDrillerComponent } from './pages/apply-driller/apply-driller.compo
 import { ApplyBoreholeComponent } from './pages/apply-borehole/apply-borehole.component';
 import { RequestWaterComponent } from './pages/request-water/request-water.component';
 import { ValidateDrillSearchResultsComponent } from './pages/validate-drill-search-results/validate-drill-search-results.component';
+import { RenewLicenseComponent } from './pages/renew-license/renew-license.component';
 
 export const routes: Routes = [
   {
@@ -37,5 +38,9 @@ export const routes: Routes = [
   {
     path: 'search',
     component: ValidateDrillSearchResultsComponent,
+  },
+  {
+    path: 'renew-license',
+    component: RenewLicenseComponent,
   },
 ];
