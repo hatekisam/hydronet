@@ -4,6 +4,7 @@ import { PrefferedSponsoredChoice } from '../../interfaces/preffered-sponsored-c
 import { CommonModule } from '@angular/common';
 import { FooterComponent } from '../../components/footer/footer.component';
 import { RouterLink } from '@angular/router';
+import { HomeSidebarComponent } from '../../components/home-sidebar/home-sidebar.component';
 
 @Component({
   selector: 'app-validate-driller',
@@ -13,13 +14,14 @@ import { RouterLink } from '@angular/router';
     CommonModule,
     FooterComponent,
     RouterLink,
+    HomeSidebarComponent,
   ],
   template: `
-    <div class="   bg-[#B5E0E8]  relative ">
-      <div class="absolute"></div>
+    <div class="   bg-[#B5E0E8] ">
       <div
-        class="z-20 h-screen w-full flex items-center justify-center flex-col  px-28  bg-[url('/assets/homeImage.png')]  bg-no-repeat bg-cover "
+        class="relative h-screen w-full flex items-center justify-center flex-col  px-28  bg-[url('/assets/homeImage.png')]  bg-no-repeat bg-cover "
       >
+        <app-home-sidebar />
         <p class=" text-[#96E8EE] text-4xl font-extrabold">
           Explore Licensed Borehole Expert in
           <span class="text-[#19B6D1]">Lagos State</span>
