@@ -8,8 +8,10 @@ import { LicenseBoxComponent } from '../../components/license-box/license-box.co
   imports: [CommonModule, LicenseBoxComponent],
   template: `
     <div>
-      <img src="../../assets/renewLicense.png" alt="" />
-      <div class="bg-[#39B6CC] px-10 py-5"></div>
+      <img src="../../../assets/renewLicense.png" alt="" />
+      <div class="bg-[#39B6CC] px-10 py-5">
+        <img src="../../../assets/renewProgress1.svg" alt="" />
+      </div>
       <div class="flex justify-between px-3 bg-[rgb(98,204,211)]">
         <p class="text-[#0A2540] text-[27px] ">{{ licenseData.id }}</p>
         <div class="flex items-center gap-2">
