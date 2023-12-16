@@ -1,9 +1,11 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { MatTabsModule } from '@angular/material/tabs';
 
 @Component({
   selector: 'app-one-driller',
   standalone: true,
-  imports: [],
+  imports: [MatTabsModule, CommonModule],
   template: `
     <div class="bg-[#E7F4F5] p-3">
       <div class="bg-white p-4 rounded-md flex  justify-between gap-5">
@@ -126,16 +128,71 @@ import { Component } from '@angular/core';
               <img src="../../../assets/star.svg" alt="" class="w-5 h-5" />
               <img src="../../../assets/star.svg" alt="" class="w-5 h-5" />
               <img src="../../../assets/star.svg" alt="" class="w-5 h-5" />
-              <img
-                src="../../../assets/star.svg"
-                alt=""
-                class="w-5 h-5"
-              />
+              <img src="../../../assets/star.svg" alt="" class="w-5 h-5" />
             </div>
           </div>
+        </div>
+      </div>
+      <div class="my-2">
+        <div class="flex ">
+          <button
+            class="bg-inherit border-b-4 px-4  "
+            [ngClass]="{ 'border-b-[#0CB9DE] ': activeTab === 0 }"
+            (click)="changeActive(0)"
+          >
+            Brief
+          </button>
+          <button
+            class="bg-inherit border-b-4 px-4 "
+            [ngClass]="{ 'border-b-[#0CB9DE] ': activeTab === 1 }"
+            (click)="changeActive(1)"
+          >
+            Track Records
+          </button>
+          <button
+            class="bg-inherit border-b-4 px-4 "
+            [ngClass]="{ 'border-b-[#0CB9DE] ': activeTab === 2 }"
+            (click)="changeActive(2)"
+          >
+            Equipments
+          </button>
+          <button
+            class="bg-inherit border-b-4 px-4 "
+            [ngClass]="{ 'border-b-[#0CB9DE] ': activeTab === 3 }"
+            (click)="changeActive(3)"
+          >
+            Contact Us
+          </button>
+          <button
+            class="bg-inherit border-b-4 px-4 "
+            [ngClass]="{ 'border-b-[#0CB9DE] ': activeTab === 4 }"
+            (click)="changeActive(4)"
+          >
+            About Us
+          </button>
+        </div>
+        <div *ngIf="activeTab === 0">
+          <p>Brief content goes here.</p>
+        </div>
+        <div *ngIf="activeTab === 1">
+          <p>Track Records content goes here.</p>
+        </div>
+        <div *ngIf="activeTab === 2">
+          <p>Equipments content goes here.</p>
+        </div>
+        <div *ngIf="activeTab === 3">
+          <p>Contact Us content goes here.</p>
+        </div>
+        <div *ngIf="activeTab === 4">
+          <p>About Us content goes here.</p>
         </div>
       </div>
     </div>
   `,
 })
-export class OneDrillerComponent {}
+export class OneDrillerComponent {
+  activeTab = 0;
+  changeActive(tab: number) {
+    this.activeTab = tab;
+  }
+}
