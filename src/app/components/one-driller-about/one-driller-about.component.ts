@@ -76,7 +76,12 @@ import { Component } from '@angular/core';
         </p>
       </div>
       <div>
-        <div class="bg-white p-4 rounded-lg"></div>
+        <div class="bg-white p-4 rounded-lg grid grid-cols-2">
+          <div>
+            <p class="text-[#121212]">LSWRC Ratinig</p>
+            
+          </div>
+        </div>
         <div class="bg-white p-4 rounded-lg"></div>
       </div>
     </div>
