@@ -2,11 +2,17 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { MatTabsModule } from '@angular/material/tabs';
 import { OneDrillerBriefComponent } from '../../components/one-driller-brief/one-driller-brief.component';
+import { OneDrillerTrackRecordsComponent } from '../../components/one-driller-track-records/one-driller-track-records.component';
 
 @Component({
   selector: 'app-one-driller',
   standalone: true,
-  imports: [MatTabsModule, CommonModule, OneDrillerBriefComponent],
+  imports: [
+    MatTabsModule,
+    CommonModule,
+    OneDrillerBriefComponent,
+    OneDrillerTrackRecordsComponent,
+  ],
   template: `
     <div class="bg-[#E7F4F5] p-3">
       <div class="bg-white p-4 rounded-md flex  justify-between gap-5">
@@ -176,7 +182,7 @@ import { OneDrillerBriefComponent } from '../../components/one-driller-brief/one
           <app-one-driller-brief />
         </div>
         <div *ngIf="activeTab === 1">
-          <p>Track Records content goes here.</p>
+          <app-one-driller-track-records />
         </div>
         <div *ngIf="activeTab === 2">
           <p>Equipments content goes here.</p>
