@@ -22,7 +22,9 @@ import { HomeSidebarComponent } from '../../components/home-sidebar/home-sidebar
         class="relative h-screen w-full flex items-center justify-center flex-col  lg:px-28 px-10  bg-[url('/assets/homeImage.png')]  bg-no-repeat bg-cover "
       >
         <app-home-sidebar />
-        <p class=" text-[#96E8EE] text-5xl lg:mt-0  mt-[50px] text-center font-[Moul] font-extrabold">
+        <p
+          class=" text-[#96E8EE] text-5xl lg:mt-0  mt-[50px] text-center font-[Moul] font-extrabold"
+        >
           Explore Licensed Borehole Expert in
           <span class="text-[#19B6D1]">Lagos State</span>
         </p>
@@ -55,7 +57,11 @@ import { HomeSidebarComponent } from '../../components/home-sidebar/home-sidebar
             <div
               class="flex items-center gap-2 border-2 border-r border-r-black  border-gray-500 bg-white py-1 px-2 rounded-l-full h-[100%]"
             >
-              <img src="../../../assets/locFil.svg" alt="" class="w-6 h-6 ml-2" />
+              <img
+                src="../../../assets/locFil.svg"
+                alt=""
+                class="w-6 h-6 ml-2"
+              />
               <select class="bg-white outline-none py-2 text-[#747474]">
                 <option>Location</option>
                 <option>Location</option>
@@ -86,7 +92,9 @@ import { HomeSidebarComponent } from '../../components/home-sidebar/home-sidebar
       <div class="bg-[#B5E0E8]">
         <div class="">
           <p class="font-bold text-[22px] p-2">Prefered & Sponsored Choice</p>
-          <div class="grid grid-cols-3 gap-3 bg-white mx-1 p-2 mb-2">
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 bg-white mx-1 p-2 mb-2"
+          >
             <app-preffered-sponsored-choice
               *ngFor="let choi of prefferedSponsoredChoice"
               [oneChoice]="choi"
@@ -96,7 +104,7 @@ import { HomeSidebarComponent } from '../../components/home-sidebar/home-sidebar
       </div>
       <app-footer />
     </div>
-  `
+  `,
 })
 export class ValidateDrillerComponent {
   prefferedSponsoredChoice: PrefferedSponsoredChoice[] = [

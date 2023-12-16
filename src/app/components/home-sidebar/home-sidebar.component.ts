@@ -8,7 +8,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [HomeSidebarLinkComponent, CommonModule],
   template: `
-    <div class="absolute  sm:w-auto w-full lg:left-0 top-20 lg:px-0 px-1 left-[30%] -translate-x-[120px] sm:-translate-x-[90px] lg:-translate-x-0 lg:top-1/2 transform -translate-y-1/2 z-20 ">
+    <div class="absolute  sm:w-auto w-full  lg:left-0 top-20 lg:px-0 px-1 left-[30%] -translate-x-[120px] sm:-translate-x-[90px] lg:-translate-x-0 lg:top-1/2 transform -translate-y-1/2 z-20 ">
       <div class="border-4 lg:gap-0 gap-4 border-[#39B6CC] lg:rounded-none rounded-md lg:rounded-r-3xl flex-row flex lg:flex-col lg:w-[100px] bg-white">
         <app-home-sidebar-link *ngFor="let link of links" [link]="link" />
       </div>

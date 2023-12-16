@@ -16,72 +16,13 @@ import { LicenseBoxComponent } from '../../components/license-box/license-box.co
   template: `
     <div>
       <div class="bg-[#E7F4F5]">
-        <div class="flex justify-between px-8 py-2">
-          <p class="text-3xl text-[#0A2540]">BoreHole Drillers</p>
-          <div class="flex items-center gap-1">
-            <p class="text-[#425466] text-xs">Forside</p>
-            <img src="../../../assets/rightArrow.svg" alt="" />
-            <p class="text-[#425466] text-xs">Bærbar</p>
-            <img src="../../../assets/rightArrow.svg" alt="" />
-            <p class="text-[#425466] text-xs">Alle Bærbar</p>
-          </div>
+        <div class="flex gap-3 items-center bg-[#BEE8EB] px-8 py-2">
+          <p class="text-2xl text-[#46777B]">Search Result |</p>
+          <p class="text-2xl text-[#46777B]">153</p>
+          <p class="text-base text-[#46777B]">Results Found</p>
         </div>
-        <div class="flex justify-between px-8 py-2">
-          <div class="flex items-center gap-5">
-            <select
-              class="bg-white   py-2 px-3 border rounded-md border-black outline-none"
-            >
-              <option>Victoria Island</option>
-              <option>Location</option>
-              <option>Location</option>
-              <option>Location</option>
-            </select>
-            <select
-              class="bg-white   py-2 px-3 border rounded-md border-black outline-none"
-            >
-              <option>Highly Recommended</option>
-              <option>Location</option>
-              <option>Location</option>
-              <option>Location</option>
-            </select>
-          </div>
-          <div class="border-[#63CCD3] border-2 rounded-md flex items-center  ">
-            <div
-              *ngIf="displayWay == 'list'; else notList"
-              class="flex gap-2 items-center text-gray-700  h-full p-2 bg-[#2C7784]"
-            >
-              <img src="../../../assets/showList.svg" alt="" />
-              <p>List</p>
-            </div>
-            <ng-template #notList>
-              <button
-                (click)="changeDisplayWay('list')"
-                class="flex gap-2 items-center text-white bg-[rgba(44,169,191,0.73)] p-2 h-full"
-              >
-                <img src="../../../assets/showList.svg" alt="" />
-                <p>List</p>
-              </button>
-            </ng-template>
-            <div
-              *ngIf="displayWay == 'grid'; else notGrid"
-              class="flex gap-2 items-center text-gray-700 bg-[#2C7784] p-2 h-full"
-            >
-              <img src="../../../assets/showGrid.svg" alt="" />
-              <p>Grid</p>
-            </div>
-            <ng-template #notGrid>
-              <button
-                (click)="changeDisplayWay('grid')"
-                class="flex gap-2 items-center text-white bg-[rgba(44,169,191,0.73)] p-2 h-full"
-              >
-                <img src="../../../assets/showGrid.svg" alt="" />
-                <p>Grid</p>
-              </button>
-            </ng-template>
-          </div>
-        </div>
-        <div class=" h-1 bg-[#39B6CC] mx-5 rounded-full"></div>
-          <!-- <div class="p-4">
+        <!-- <div class=" h-1 bg-[#39B6CC] mx-5 rounded-full"></div>
+        <!-- <div class="p-4">
             <p class="font-medium">Prefered & Sponsored Choice</p>
             <div class="grid grid-cols-3 gap-5">
               <app-preffered-sponsored-choice
@@ -90,7 +31,7 @@ import { LicenseBoxComponent } from '../../components/license-box/license-box.co
               />
             </div>
           </div> -->
-      </div>
+        <!-- </div>
       <div class="bg-[#FAFBFE] p-10">
         <div class="flex justify-between ">
           <div
@@ -122,6 +63,78 @@ import { LicenseBoxComponent } from '../../components/license-box/license-box.co
             />
           </div>
         </div>
+      </div> -->
+        <div class="bg-white rounded-md p-4 border shadow-sm">
+          <div class="flex justify-between items-center">
+            <div class="flex gap-2 items-center">
+              <img src="../../../assets/filter.svg" alt="" class="w-5 h-5" />
+              <select
+                class="border-[#0CB9DE] border outline-none text-[#0CB9DE] px-2 py-1 rounded-full bg-white"
+              >
+                <option value="">Victoria Island</option>
+                <option value="">Victoria Island</option>
+                <option value="">Victoria Island</option>
+                <option value="">Victoria Island</option>
+              </select>
+              <select
+                class="border-[#0CB9DE] border outline-none text-[#0CB9DE] px-2 py-1 rounded-full bg-white"
+              >
+                <option value="">Victoria Island</option>
+                <option value="">Victoria Island</option>
+                <option value="">Victoria Island</option>
+                <option value="">Victoria Island</option>
+              </select>
+            </div>
+            <div
+              class="border-[#63CCD3] border-2 rounded-full flex items-center  "
+            >
+              <div
+                *ngIf="displayWay == 'list'; else notList"
+                class="flex gap-2 items-center rounded-full   h-full px-2 py-1 bg-[#0CB9DE]"
+              >
+                <img
+                  src="../../../assets/showListSel.svg"
+                  alt=""
+                  class="w-5 h-5"
+                />
+              </div>
+              <ng-template #notList>
+                <button
+                  (click)="changeDisplayWay('list')"
+                  class="flex gap-2 items-center rounded-full text-white bg-white px-2 py-1 h-full"
+                >
+                  <img
+                    src="../../../assets/showList.svg"
+                    alt=""
+                    class="w-5 h-5"
+                  />
+                </button>
+              </ng-template>
+              <div
+                *ngIf="displayWay == 'grid'; else notGrid"
+                class="flex gap-2 items-center rounded-full  bg-[#0CB9DE] px-2 py-1 h-full"
+              >
+                <img
+                  src="../../../assets/showGridSel.svg"
+                  alt=""
+                  class="w-5 h-5"
+                />
+              </div>
+              <ng-template #notGrid>
+                <button
+                  (click)="changeDisplayWay('grid')"
+                  class="flex gap-2 items-center rounded-full text-white bg-white]  px-2 py-1 h-full"
+                >
+                  <img
+                    src="../../../assets/showGrid.svg"
+                    alt=""
+                    class="w-5 h-5"
+                  />
+                </button>
+              </ng-template>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   `,
@@ -134,7 +147,6 @@ export class ValidateDrillSearchResultsComponent {
   changeDisplayWay(way: 'grid' | 'list') {
     this.displayWay = way;
   }
-
 
   licenseBoxList: LicenseBoxProps[] = [
     {
