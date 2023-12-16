@@ -7,6 +7,7 @@ import { ApplyBoreholeComponent } from './pages/apply-borehole/apply-borehole.co
 import { RequestWaterComponent } from './pages/request-water/request-water.component';
 import { ValidateDrillSearchResultsComponent } from './pages/validate-drill-search-results/validate-drill-search-results.component';
 import { RenewLicenseComponent } from './pages/renew-license/renew-license.component';
+import { OneDrillerComponent } from './pages/one-driller/one-driller.component';
 
 export const routes: Routes = [
   {
@@ -42,5 +43,9 @@ export const routes: Routes = [
   {
     path: 'renew-license',
     component: RenewLicenseComponent,
+  },
+  {
+    path: 'driller/:id',
+    component: OneDrillerComponent,
   },
 ];
