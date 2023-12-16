@@ -4,5 +4,4 @@ export interface DrillerLicenseProps {
   subtitle: string;
   levels: number[];
   body: string;
-  grid?: boolean;
 }

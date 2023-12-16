@@ -62,8 +62,8 @@ import { CommonModule } from '@angular/common';
         </div>
       </div>
       <div class="my-2 text-[#525967] text-[13px]">
-        <div *ngIf="oneChoice.body.length >= 150; else fullBody">
-          <p>{{ oneChoice.body.slice(0, 150) }}</p>
+        <div *ngIf="oneChoice.body.length >= 250; else fullBody">
+          <p>{{ oneChoice.body.slice(0, 250) }}</p>
           <a href="" class="text-gray-400">more</a>
         </div>
         <ng-template #fullBody>
