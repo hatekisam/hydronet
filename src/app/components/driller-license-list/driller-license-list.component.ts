@@ -1,19 +1,16 @@
-import { Component, Input, ViewEncapsulation } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { DrillerLicenseProps } from '../../interfaces/driller-license-props';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-driller-license',
+  selector: 'app-driller-license-list',
   standalone: true,
-  encapsulation: ViewEncapsulation.None,
   imports: [MatProgressBarModule, CommonModule],
   template: `
-    <div
-      class="bg-white p-2 shadow-sm rounded-md text-black"
-    >
-      <div class="flex justify-between items-center gap-3">
-        <img [src]="oneChoice.image" [alt]="oneChoice.title" class="w-[50%]" />
+    <div class="bg-white p-2 shadow-md flex gap-5 rounded-md text-black">
+      <div class="flex justify-between items-center gap-3 w-[45%]">
+        <img [src]="oneChoice.image" [alt]="oneChoice.title" class="w-[250px]" />
         <div class="w-full">
           <p class=" font-bold text-[#043924] my-2 text-center">
             {{ oneChoice.title }}
@@ -61,7 +58,7 @@ import { CommonModule } from '@angular/common';
           </div>
         </div>
       </div>
-      <div class="my-2 text-[#525967] text-[13px]">
+      <div class="my-2 text-[#525967] text-[13px] w-[55%]">
         <div *ngIf="oneChoice.body.length >= 150; else fullBody">
           <p>{{ oneChoice.body.slice(0, 150) }}</p>
           <a href="" class="text-gray-400">more</a>
@@ -81,6 +78,6 @@ import { CommonModule } from '@angular/common';
     </div>
   `,
 })
-export class DrillerLicenseComponent {
+export class DrillerLicenseListComponent {
   @Input() oneChoice!: DrillerLicenseProps;
 }

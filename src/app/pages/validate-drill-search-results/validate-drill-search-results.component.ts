@@ -4,6 +4,9 @@ import { PrefferedSponsoredChoice } from '../../interfaces/preffered-sponsored-c
 import { PrefferedSponsoredChoiceComponent } from '../../components/preffered-sponsored-choice/preffered-sponsored-choice.component';
 import { LicenseBoxProps } from '../../interfaces/license-box-props';
 import { LicenseBoxComponent } from '../../components/license-box/license-box.component';
+import { DrillerLicenseComponent } from '../../components/driller-license/driller-license.component';
+import { DrillerLicenseProps } from '../../interfaces/driller-license-props';
+import { DrillerLicenseListComponent } from '../../components/driller-license-list/driller-license-list.component';
 
 @Component({
   selector: 'app-validate-drill-search-results',
@@ -11,7 +14,8 @@ import { LicenseBoxComponent } from '../../components/license-box/license-box.co
   imports: [
     CommonModule,
     PrefferedSponsoredChoiceComponent,
-    LicenseBoxComponent,
+    DrillerLicenseComponent,
+    DrillerLicenseListComponent,
   ],
   template: `
     <div>
@@ -134,12 +138,23 @@ import { LicenseBoxComponent } from '../../components/license-box/license-box.co
               </ng-template>
             </div>
           </div>
-          <div class="grid grid-cols-2 gap-2">
-          <app-license-box
+          <div
+            *ngIf="displayWay == 'grid'; else notGridList"
+            class="grid grid-cols-2 gap-2"
+          >
+            <app-driller-license
               *ngFor="let choi of licenseBoxList"
               [oneChoice]="choi"
             />
           </div>
+          <ng-template #notGridList>
+            <div class="grid grid-cols-1 gap-2">
+              <app-driller-license-list
+                *ngFor="let choi of licenseBoxList"
+                [oneChoice]="choi"
+              />
+            </div>
+          </ng-template>
         </div>
       </div>
     </div>
@@ -147,113 +162,29 @@ import { LicenseBoxComponent } from '../../components/license-box/license-box.co
 })
 export class ValidateDrillSearchResultsComponent {
   displayWay: 'grid' | 'list';
+  licenseBoxList: DrillerLicenseProps[];
   constructor() {
     this.displayWay = 'list';
+    this.licenseBoxList = [
+      {
+        image: '../../../assets/licenseImage.png',
+        title: 'License 1',
+        levels: [60, 70, 20, 40],
+        subtitle: 'fasdfasdfasdf',
+        grid: this.displayWay != 'list' ? true : false,
+        body: 'Description of License 1.Sed do eiusmod tempor incididunt ut labore et dolore magna aliquaSed do eiusmod tempor incididunt ut labore et dolore magna aliquaSed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+      },
+      {
+        image: '../../../assets/licenseImage.png',
+        title: 'License 1',
+        levels: [60, 70, 20, 40],
+        subtitle: 'fasdfasdfasdf',
+        grid: this.displayWay != 'list' ? true : false,
+        body: 'Description of License 1.Sed do eiusmod tempor incididunt ut labore et dolore magna aliquaSed do eiusmod tempor incididunt ut labore et dolore magna aliquaSed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+      },
+    ];
   }
   changeDisplayWay(way: 'grid' | 'list') {
     this.displayWay = way;
   }
-
-  licenseBoxList: LicenseBoxProps[] = [
-    {
-      image: '../../../assets/licenseImage.png',
-      title: 'License 1',
-      activities: 120,
-      tags: ['Tag1', 'Tag2'],
-      rating: 4.5,
-      reviews: 120,
-      lever: 3,
-      body: 'Description of License 1.Sed do eiusmod tempor incididunt ut labore et dolore magna aliquaSed do eiusmod tempor incididunt ut labore et dolore magna aliquaSed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
-    },
-    {
-      image: '../../../assets/licenseImage.png',
-      title: 'License 2',
-      activities: 134,
-      tags: ['Tag3', 'Tag4'],
-      rating: 3.8,
-      reviews: 80,
-      lever: 2,
-      body: 'Description of License 2.Sed do eiusmod tempor incididunt ut labore et dolore magna aliquaSed do eiusmod tempor incididunt ut labore et dolore magna aliquaSed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
-    },
-    {
-      image: '../../../assets/licenseImage.png',
-      title: 'License 1',
-      activities: 120,
-      tags: ['Tag1', 'Tag2'],
-      rating: 4.5,
-      reviews: 120,
-      lever: 3,
-      body: 'Description of License 1.Sed do eiusmod tempor incididunt ut labore et dolore magna aliquaSed do eiusmod tempor incididunt ut labore et dolore magna aliquaSed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
-    },
-    {
-      image: '../../../assets/licenseImage.png',
-      title: 'License 2',
-      activities: 134,
-      tags: ['Tag3', 'Tag4'],
-      rating: 3.8,
-      reviews: 80,
-      lever: 2,
-      body: 'Description of License 2.Sed do eiusmod tempor incididunt ut labore et dolore magna aliquaSed do eiusmod tempor incididunt ut labore et dolore magna aliquaSed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
-    },
-    {
-      image: '../../../assets/licenseImage.png',
-      title: 'License 1',
-      activities: 120,
-      tags: ['Tag1', 'Tag2'],
-      rating: 4.5,
-      reviews: 120,
-      lever: 3,
-      body: 'Description of License 1.Sed do eiusmod tempor incididunt ut labore et dolore magna aliquaSed do eiusmod tempor incididunt ut labore et dolore magna aliquaSed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
-    },
-    {
-      image: '../../../assets/licenseImage.png',
-      title: 'License 2',
-      activities: 134,
-      tags: ['Tag3', 'Tag4'],
-      rating: 3.8,
-      reviews: 80,
-      lever: 2,
-      body: 'Description of License 2.Sed do eiusmod tempor incididunt ut labore et dolore magna aliquaSed do eiusmod tempor incididunt ut labore et dolore magna aliquaSed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
-    },
-    {
-      image: '../../../assets/licenseImage.png',
-      title: 'License 1',
-      activities: 120,
-      tags: ['Tag1', 'Tag2'],
-      rating: 4.5,
-      reviews: 120,
-      lever: 3,
-      body: 'Description of License 1.Sed do eiusmod tempor incididunt ut labore et dolore magna aliquaSed do eiusmod tempor incididunt ut labore et dolore magna aliquaSed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
-    },
-    {
-      image: '../../../assets/licenseImage.png',
-      title: 'License 2',
-      activities: 134,
-      tags: ['Tag3', 'Tag4'],
-      rating: 3.8,
-      reviews: 80,
-      lever: 2,
-      body: 'Description of License 2.Sed do eiusmod tempor incididunt ut labore et dolore magna aliquaSed do eiusmod tempor incididunt ut labore et dolore magna aliquaSed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
-    },
-    {
-      image: '../../../assets/licenseImage.png',
-      title: 'License 1',
-      activities: 120,
-      tags: ['Tag1', 'Tag2'],
-      rating: 4.5,
-      reviews: 120,
-      lever: 3,
-      body: 'Description of License 1.Sed do eiusmod tempor incididunt ut labore et dolore magna aliquaSed do eiusmod tempor incididunt ut labore et dolore magna aliquaSed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
-    },
-    {
-      image: '../../../assets/licenseImage.png',
-      title: 'License 2',
-      activities: 134,
-      tags: ['Tag3', 'Tag4'],
-      rating: 3.8,
-      reviews: 80,
-      lever: 2,
-      body: 'Description of License 2.Sed do eiusmod tempor incididunt ut labore et dolore magna aliquaSed do eiusmod tempor incididunt ut labore et dolore magna aliquaSed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
-    },
-  ];
 }
