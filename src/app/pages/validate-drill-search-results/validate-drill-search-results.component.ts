@@ -64,7 +64,7 @@ import { LicenseBoxComponent } from '../../components/license-box/license-box.co
           </div>
         </div>
       </div> -->
-        <div class="bg-white rounded-md p-4 border shadow-sm">
+        <div class="bg-white rounded-md p-4 border shadow-sm m-2">
           <div class="flex justify-between items-center">
             <div class="flex gap-2 items-center">
               <img src="../../../assets/filter.svg" alt="" class="w-5 h-5" />
@@ -79,10 +79,10 @@ import { LicenseBoxComponent } from '../../components/license-box/license-box.co
               <select
                 class="border-[#0CB9DE] border outline-none text-[#0CB9DE] px-2 py-1 rounded-full bg-white"
               >
-                <option value="">Victoria Island</option>
-                <option value="">Victoria Island</option>
-                <option value="">Victoria Island</option>
-                <option value="">Victoria Island</option>
+                <option value="">Location</option>
+                <option value="">Location</option>
+                <option value="">Location</option>
+                <option value="">Location</option>
               </select>
             </div>
             <div
@@ -133,6 +133,12 @@ import { LicenseBoxComponent } from '../../components/license-box/license-box.co
                 </button>
               </ng-template>
             </div>
+          </div>
+          <div class="grid grid-cols-2 gap-2">
+          <app-license-box
+              *ngFor="let choi of licenseBoxList"
+              [oneChoice]="choi"
+            />
           </div>
         </div>
       </div>
