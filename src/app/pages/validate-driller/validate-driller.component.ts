@@ -96,8 +96,7 @@ import { HomeSidebarComponent } from '../../components/home-sidebar/home-sidebar
       </div>
       <app-footer />
     </div>
-  `,
-  styleUrl: './validate-driller.component.css',
+  `
 })
 export class ValidateDrillerComponent {
   prefferedSponsoredChoice: PrefferedSponsoredChoice[] = [

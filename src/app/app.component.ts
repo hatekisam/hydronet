@@ -11,7 +11,6 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     <app-navbar></app-navbar>
     <router-outlet></router-outlet>
   </main>`,
-  styleUrl: './app.component.css',
 })
 export class AppComponent {
   title = 'hydronet';

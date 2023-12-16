@@ -1,18 +1,22 @@
 import { Component, Input } from '@angular/core';
 import { HomeSideLink } from '../../interfaces/home-side-link';
 import { RouterLink } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-home-sidebar-link',
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink, CommonModule],
   template: `
     <a
       [routerLink]="link.to"
-      class="py-2 border-b-2 flex flex-col items-center justify-center"
+      class="py-2  flex flex-col items-center justify-center"
+      [ngClass]="{ 'border-b-2': link.id !== 5 }"
     >
       <img class="listing-photo" [src]="link.icon" />
-      <p class="text-center text-black font-extrabold text-[10px]">{{ link.title }}</p>
+      <p class="text-center text-black font-extrabold text-[10px]">
+        {{ link.title }}
+      </p>
     </a>
   `,
 })

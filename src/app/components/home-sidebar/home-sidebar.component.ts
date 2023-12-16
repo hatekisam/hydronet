@@ -18,26 +18,31 @@ import { CommonModule } from '@angular/common';
 export class HomeSidebarComponent {
   links: HomeSideLink[] = [
     {
+      id:1,
       title: 'Validate Driller Permit',
       icon: '/assets/homeSideIcon.svg',
       to: '',
     },
     {
+      id:2,
       title: 'Renew Permit',
       icon: '/assets/homeSideIcon.svg',
       to: 'renew',
     },
     {
+      id:3,
       title: 'Apply for Driller License',
       icon: '/assets/homeSideIcon.svg',
       to: 'apply-driller',
     },
     {
+      id:4,
       title: 'Apply for Borehole Permit',
       icon: '/assets/homeSideIcon.svg',
       to: '',
     },
     {
+      id:5,
       title: 'Request Water Test/Analysis',
       icon: '/assets/homeSideIcon.svg',
       to: '',
