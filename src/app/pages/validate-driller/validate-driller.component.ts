@@ -19,15 +19,15 @@ import { HomeSidebarComponent } from '../../components/home-sidebar/home-sidebar
   template: `
     <div class="   bg-[#B5E0E8] ">
       <div
-        class="relative h-screen w-full flex items-center justify-center flex-col  px-28  bg-[url('/assets/homeImage.png')]  bg-no-repeat bg-cover "
+        class="relative h-screen w-full flex items-center justify-center flex-col  lg:px-28 px-10  bg-[url('/assets/homeImage.png')]  bg-no-repeat bg-cover "
       >
         <app-home-sidebar />
-        <p class=" text-[#96E8EE] text-4xl font-extrabold">
+        <p class=" text-[#96E8EE] text-5xl lg:mt-0  mt-[50px] text-center font-[Moul] font-extrabold">
           Explore Licensed Borehole Expert in
           <span class="text-[#19B6D1]">Lagos State</span>
         </p>
         <p
-          class="text-[#CBE8EA]  w-[80%] text-center text-2xl font-extrabold my-3 mb-16"
+          class="text-[#CBE8EA]  text-center text-2xl font-extrabold my-3 mb-16"
         >
           Lagos State Water Regulation Commission (LSWRC) has mandated that all
           Borehole drilling must be carried out by certified Drillers.
@@ -55,7 +55,7 @@ import { HomeSidebarComponent } from '../../components/home-sidebar/home-sidebar
             <div
               class="flex items-center gap-2 border-2 border-r border-r-black  border-gray-500 bg-white py-1 px-2 rounded-l-full h-[100%]"
             >
-              <img src="../../../assets/locFil.svg" alt="" class="w-6 h-6" />
+              <img src="../../../assets/locFil.svg" alt="" class="w-6 h-6 ml-2" />
               <select class="bg-white outline-none py-2 text-[#747474]">
                 <option>Location</option>
                 <option>Location</option>
@@ -64,13 +64,13 @@ import { HomeSidebarComponent } from '../../components/home-sidebar/home-sidebar
               </select>
             </div>
             <div
-              class="flex items-center gap-2  border-2 border-gray-500 border-l-0 bg-white py-1 px-2 rounded-r-full h-[50px]"
+              class="flex items-center gap-2  border-2 border-gray-500 border-l-0 bg-white px-2 rounded-r-full h-[48px]"
             >
               <img src="../../../assets/locFil.svg" alt="" class="w-6 h-6" />
               <input
                 type="text"
                 placeholder="UIDD"
-                class="border-none outline-none px-4 py-2"
+                class="border-none outline-none px-4 py-1"
               />
               <a
                 [routerLink]="'search'"

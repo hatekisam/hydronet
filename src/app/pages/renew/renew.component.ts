@@ -7,15 +7,15 @@ import { HomeSidebarComponent } from '../../components/home-sidebar/home-sidebar
   imports: [HomeSidebarComponent],
   template: `
     <div
-      class="bg-[url('/assets/homeImage.png')]   bg-no-repeat h-screen w-screen flex items-center justify-center flex-col px-28  bg-cover "
+      class="bg-[url('/assets/homeImage.png')]   bg-no-repeat h-screen w-screen flex items-center justify-center flex-col lg:px-28 px-10  bg-cover "
     >
       <app-home-sidebar />
-      <p class=" text-[#96E8EE] text-4xl font-extrabold mb-10">
+      <p class=" text-[#96E8EE] text-4xl text-center font-[Moul] font-extrabold mb-10">
         Borehole Driller License Renewal
         <span class="text-[#19B6D1]">Lagos State</span>
       </p>
       <p
-        class="text-[#CBE8EA]  w-[80%] text-center text-2xl font-extrabold "
+        class="text-[#CBE8EA] lg: w-[80%] text-center text-2xl font-extrabold "
       >
         LSWRC Renewal Borehole drilling must be carried out by certified
         Drillers.
