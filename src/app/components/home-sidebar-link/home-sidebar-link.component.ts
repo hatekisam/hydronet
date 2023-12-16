@@ -9,7 +9,7 @@ import { RouterLink } from '@angular/router';
   template: `
     <a
       [routerLink]="link.to"
-      class="py-2 border-b-2 flex flex-col items-center justify-center"
+      class="py-2 border-none lg:gap-0 lg:border-b-2 hover:bg-[#62CCD3] border-[#3A949A] flex flex-col items-center justify-center"
     >
       <img class="listing-photo" [src]="link.icon" />
       <p class="text-center text-black font-extrabold text-[10px]">{{ link.title }}</p>

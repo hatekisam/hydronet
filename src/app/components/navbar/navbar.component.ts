@@ -7,9 +7,9 @@ import { Component } from '@angular/core';
   template: `
     <div class="">
       <div class="h-4 w-full bg-[#63CCD3]"></div>
-      <div class="px-20 py-2 bg-white">
-        <div class="flex justify-between">
-          <div class="flex items-center gap-4">
+      <div class="xl:px-20 px-4 py-2 bg-white">
+        <div class="flex justify-end lg:justify-between">
+          <div class="lg:flex hidden items-center gap-2 xl:gap-4">
             <a href="" class="flex gap-2 items-center">
               <img src="/assets/downArrow.svg" alt="" />
               <p>Home</p>
@@ -35,7 +35,7 @@ import { Component } from '@angular/core';
               <p>Contact Us</p>
             </a>
             <button
-              class="px-4 py-1 bg-[#63CCD3] text-white font-semibold rounded-md flex items-center gap-2"
+              class="xl:px-4 px-2 py-1 bg-[#63CCD3] text-white font-semibold rounded-md flex items-center gap-2"
             >
               <img src="/assets/pcPlatform.svg" alt="" />
               <p>Pc Platfrom</p>
