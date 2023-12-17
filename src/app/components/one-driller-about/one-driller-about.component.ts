@@ -76,8 +76,8 @@ import { Component } from '@angular/core';
         </p>
       </div>
       <div>
-        <div class="bg-white p-4 rounded-lg grid grid-cols-2">
-          <div>
+        <div class="bg-white p-4 rounded-lg flex items-center gap-3">
+          <div class="w-[60%]">
             <p class="text-[#121212]">LSWRC Ratinig</p>
             <div class="flex gap-2 items-center">
               <img src="../../../assets/onBoarding.svg" alt="" />
@@ -130,8 +130,67 @@ import { Component } from '@angular/core';
               <p>8.5</p>
             </div>
           </div>
+          <div class="w-[40%]">
+            <p class="text-base font-bold mb-3 text-center">Social Profiles</p>
+            <div class="flex gap-4 justify-center">
+              <a href="">
+                <img
+                  src="../../../assets/twitterBlue.svg"
+                  alt=""
+                  class="w-10 h-10"
+                />
+              </a>
+              <a href="">
+                <img
+                  src="../../../assets/whatsappBlue.svg"
+                  alt=""
+                  class="w-10 h-10"
+                />
+              </a>
+              <a href="">
+                <img
+                  src="../../../assets/linkedInBlue.svg"
+                  alt=""
+                  class="w-10 h-10"
+                />
+              </a>
+              <a href="">
+                <img
+                  src="../../../assets/facebookBlue.svg"
+                  alt=""
+                  class="w-10 h-10"
+                />
+              </a>
+              <a href="">
+                <img
+                  src="../../../assets/instargramBlue.svg"
+                  alt=""
+                  class="w-10 h-10"
+                />
+              </a>
+            </div>
+          </div>
         </div>
-        <div class="bg-white p-4 rounded-lg"></div>
+        <div class="bg-white p-4 rounded-lg mt-4">
+          <div class="flex justify-between items-center">
+          <div class=" p-3 text-center">
+            <div class="flex gap-2  justify-center items-center">
+              <p class="text-[#0CB9DE] text-6xl font-bold">5</p>
+              <div class="text-[#121212]">
+                <p class="font-bold">Excellent</p>
+                <p class="text-xs">158 reveiws</p>
+              </div>
+            </div>
+            <div class="flex gap-2 justify-center items-center">
+              <img src="../../../assets/star.svg" alt="" class="w-5 h-5" />
+              <img src="../../../assets/star.svg" alt="" class="w-5 h-5" />
+              <img src="../../../assets/star.svg" alt="" class="w-5 h-5" />
+              <img src="../../../assets/star.svg" alt="" class="w-5 h-5" />
+              <img src="../../../assets/star.svg" alt="" class="w-5 h-5" />
+            </div>
+          </div>
+          </div>
+        </div>
       </div>
     </div>
   `,
