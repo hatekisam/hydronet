@@ -10,8 +10,8 @@ import { CommonModule } from '@angular/common';
     <div
       class="bg-white p-2 shadow-sm border border-[#E6F8FC] rounded-md text-black"
     >
-      <div class="flex justify-between gap-5 ">
-        <img [src]="oneChoice.image" [alt]="oneChoice.title" class="h-full " />
+      <div class="flex flex-col sm:flex-row  gap-5 ">
+        <img [src]="oneChoice.image" [alt]="oneChoice.title" class=" " />
         <div class="">
           <p class="text-center font-bold text-[#043924] mb-1">
             {{ oneChoice.title }}
@@ -33,7 +33,7 @@ import { CommonModule } from '@angular/common';
               *ngFor="let tag of oneChoice.otherTags"
             >
               <div
-                class="absolute -top-2 -right-2  px-2 p-1 rounded-full text-sm font-bold bg-[#39B6CC] text-white"
+                class="absolute -top-2 -right-2  px-2 p-1 rounded-full text-sm font-bold bg-[#39B6CC] text-white text-[8px]"
               >
                 {{ tag.number }}
               </div>
