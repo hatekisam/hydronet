@@ -3,4 +3,5 @@ export interface Reveiw {
   name: string;
   rating: number;
   body: string;
+  index?:number;
 }

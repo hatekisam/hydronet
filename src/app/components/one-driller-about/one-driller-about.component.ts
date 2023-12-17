@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
+import { Reveiw } from '../../interfaces/reveiw';
+import { ReviewComponent } from '../review/review.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-one-driller-about',
   standalone: true,
-  imports: [],
+  imports: [ReviewComponent,CommonModule],
   template: `
     <div class="grid grid-cols-2 gap-5 p-4">
       <div class="bg-white p-4 rounded-lg">
@@ -228,10 +231,32 @@ import { Component } from '@angular/core';
               <p>Reviews</p>
               <sup class="text-xs">(54)</sup>
             </div>
+            <div>
+              <app-review
+                *ngFor="let review of reviews; let last = last"
+                [reveiw]="review"
+                [isLastIndex]="last"
+              ></app-review>
+            </div>
           </div>
         </div>
       </div>
     </div>
   `,
 })
-export class OneDrillerAboutComponent {}
+export class OneDrillerAboutComponent {
+  reviews: Reveiw[] = [
+    {
+      name: 'John Doe',
+      image: '../../../assets/reviewer.svg',
+      rating: 4,
+      body: 'Great experience!,Great experience!,Great experience!,Great experience!Great experience!Great experience!Great experience!Great experience!Great experience!Great experience!Great experience!Great experience!Great experience!Great experience!Great experience!Great experience!Great experience!Great experience!Great experience!Great experience!',
+    },
+    {
+      name: 'Jane Smith',
+      image: '../../../assets/reviewer.svg',
+      rating: 5,
+      body: 'Excellent service!Great experience!Great experience!Great experience!Great experience!Great experience!Great experience!Great experience!Great experience!Great experience!Great experience!Great experience!Great experience!Great experience!Great experience!Great experience!Great experience!Great experience!Great experience!Great experience!Great experience!Great experience!Great experience!Great experience!Great experience!Great experience!Great experience!Great experience!',
+    },
+  ];
+}
