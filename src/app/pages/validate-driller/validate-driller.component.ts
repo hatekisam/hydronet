@@ -39,19 +39,25 @@ import { HomeSidebarComponent } from '../../components/home-sidebar/home-sidebar
           borehole water Drillers with the LSWRC for your borehole water
           Drilling needs.
         </p>
-        <div class="p-5 rounded-xl bg-[#D1F4F7] border  m-4">
-          <div class="flex justify-between items-center gap-20 mb-4">
+        <div class="p-5 w-full sm:w-auto rounded-xl bg-[#D1F4F7] border  m-4">
+          <div class="flex justify-between items-center gap-2 mb-4">
             <div class="flex items-center gap-2 font-bold text-xl">
               <p>FIND</p>
               <p>|</p>
               <p>Validate</p>
             </div>
-            <div class="flex items-center gap-2 text-sm">
+            <div class="hidden sm:flex items-center gap-2 text-sm">
               <button>Residential</button>
               <button>Commercial</button>
               <button>Municipal</button>
               <button>Sewage</button>
             </div>
+            <select class="block sm:hidden bg-[#D1F4F7] outline-none py-2 text-[#747474]">
+                <option>Category</option>
+                <option>Category</option>
+                <option>Category</option>
+                <option>Category</option>
+              </select>
           </div>
           <div class="flex items-center">
             <div
@@ -60,7 +66,7 @@ import { HomeSidebarComponent } from '../../components/home-sidebar/home-sidebar
               <img
                 src="../../../assets/locFil.svg"
                 alt=""
-                class="w-6 h-6 ml-2"
+                class="w-6 h-6 "
               />
               <select class="bg-white outline-none py-2 text-[#747474]">
                 <option>Location</option>
@@ -76,14 +82,14 @@ import { HomeSidebarComponent } from '../../components/home-sidebar/home-sidebar
               <input
                 type="text"
                 placeholder="UIDD"
-                class="border-none outline-none px-4 py-1 w-[70%] bg-red-500"
+                class="border-none outline-none px-4 py-1 w-[70%] "
               />
               <a
                 [routerLink]="'search'"
                 class="flex items-center gap-2 px-2 py-1 bg-[#63CCD3] rounded-full text-white font-bold"
               >
                 <img src="../../../assets/search.svg" alt="" class="w-5 h-5" />
-                <p class="text-[12px]">Search</p>
+                <p class="text-[12px] hidden sm:block">Search</p>
               </a>
             </div>
           </div>

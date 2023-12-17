@@ -1,24 +1,16 @@
 import { Component, Input } from '@angular/core';
-import { DrillerLicenseProps } from '../../interfaces/driller-license-props';
-import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { LicenseBoxProps } from '../../interfaces/license-box-props';
 import { CommonModule } from '@angular/common';
+import { DrillerLicenseProps } from '../../interfaces/driller-license-props';
 
 @Component({
-  selector: 'app-driller-license-list',
+  selector: 'app-featured-box',
   standalone: true,
-  imports: [MatProgressBarModule, CommonModule],
+  imports: [CommonModule],
   template: `
-    <div
-      class="bg-white p-2 shadow-md flex flex-col sm:flex-row gap-5 rounded-md text-black"
-    >
-      <div
-        class="flex flex-col sm:flex-row justify-between items-center gap-3 w-full sm:w-[45%]"
-      >
-        <img
-          [src]="oneChoice.image"
-          [alt]="oneChoice.title"
-          class="w-full md:w-[250px]"
-        />
+    <div class="bg-white p-2 shadow-sm rounded-md text-black min-w-[500px]">
+      <div class="flex justify-between items-center gap-3">
+        <img [src]="oneChoice.image" [alt]="oneChoice.title" class="w-[50%]" />
         <div class="w-full">
           <p class=" font-bold text-[#043924] my-2 text-center">
             {{ oneChoice.title }}
@@ -68,9 +60,9 @@ import { CommonModule } from '@angular/common';
           </div>
         </div>
       </div>
-      <div class="my-2 text-[#525967] text-[13px] w-full sm:w-[55%]">
-        <div *ngIf="oneChoice.body.length >= 500; else fullBody">
-          <p>{{ oneChoice.body.slice(0, 500) }}</p>
+      <div class="my-2 text-[#525967] text-[13px]">
+        <div *ngIf="oneChoice.body.length >= 250; else fullBody">
+          <p>{{ oneChoice.body.slice(0, 250) }}</p>
           <a href="" class="text-gray-400">more</a>
         </div>
         <ng-template #fullBody>
@@ -83,14 +75,11 @@ import { CommonModule } from '@angular/common';
           <button class="border border-[#B7E5E8] rounded-md px-4 py-1 w-[50%]">
             Share
           </button>
-          <button>
-            <img src="../../../shareIcon.svg" alt="" class="w-5 h-5" />
-          </button>
         </div>
       </div>
     </div>
   `,
 })
-export class DrillerLicenseListComponent {
+export class FeaturedBoxComponent {
   @Input() oneChoice!: DrillerLicenseProps;
 }

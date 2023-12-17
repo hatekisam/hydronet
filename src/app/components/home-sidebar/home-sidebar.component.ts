@@ -9,10 +9,10 @@ import { CommonModule } from '@angular/common';
   imports: [HomeSidebarLinkComponent, CommonModule],
   template: `
     <div
-      class=" w-full top-0 left-0 absolute lg:top-1/2 lg:left-0 transform lg:-translate-y-1/2 z-20 px-2 "
+      class=" w-full top-0 left-0 absolute lg:top-1/2 lg:left-0 transform lg:-translate-y-1/2 z-20 px-2 lg:px-0 "
     >
       <div
-        class="lg:border-4 border-0 border-b-4 lg:gap-0 gap-4 border-[#39B6CC] lg:rounded-none rounded-b-md lg:rounded-r-3xl flex-row justify-between flex lg:flex-col lg:w-[100px] bg-white px-2"
+        class="lg:border-4 border-0 border-b-4 lg:gap-0 gap-4 border-[#39B6CC] lg:rounded-none rounded-b-md lg:rounded-r-3xl flex-row justify-between flex lg:flex-col lg:w-[100px] bg-white px-2 lg:px-0"
       >
         <app-home-sidebar-link *ngFor="let link of links" [link]="link" />
       </div>
