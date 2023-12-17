@@ -202,7 +202,7 @@ import { OneDrillerContactComponent } from '../../components/one-driller-contact
   `,
 })
 export class OneDrillerComponent {
-  activeTab = 3;
+  activeTab = 0;
   changeActive(tab: number) {
     this.activeTab = tab;
   }

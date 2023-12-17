@@ -8,6 +8,7 @@ import { RequestWaterComponent } from './pages/request-water/request-water.compo
 import { ValidateDrillSearchResultsComponent } from './pages/validate-drill-search-results/validate-drill-search-results.component';
 import { RenewLicenseComponent } from './pages/renew-license/renew-license.component';
 import { OneDrillerComponent } from './pages/one-driller/one-driller.component';
+import { RenewLicensePackagesComponent } from './pages/renew-license-packages/renew-license-packages.component';
 
 export const routes: Routes = [
   {
@@ -43,6 +44,10 @@ export const routes: Routes = [
   {
     path: 'renew-license',
     component: RenewLicenseComponent,
+  },
+  {
+    path: 'renew-license-packages',
+    component: RenewLicensePackagesComponent,
   },
   {
     path: 'driller/:id',

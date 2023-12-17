@@ -1,16 +1,21 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { LicenseBoxComponent } from '../../components/license-box/license-box.component';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-renew-license',
   standalone: true,
-  imports: [CommonModule, LicenseBoxComponent],
+  imports: [CommonModule, LicenseBoxComponent, RouterLink],
   template: `
     <div>
       <img src="../../../assets/renewLicense.png" alt="" />
-      <div class="bg-[#39B6CC] px-10 py-5">
-        <img src="../../../assets/renewProgress1.svg" alt="" />
+      <div class="bg-[#39B6CC] px-10 py-5 flex items-center justify-center">
+        <img
+          src="../../../assets/renewProgress1.svg"
+          alt=""
+          class="w-[80%] h-[70px]"
+        />
       </div>
       <div class="flex justify-between px-3 bg-[rgb(98,204,211)]">
         <p class="text-[#0A2540] text-[27px] ">{{ licenseData.id }}</p>
@@ -83,11 +88,11 @@ import { LicenseBoxComponent } from '../../components/license-box/license-box.co
             </div>
           </div>
           <div class="px-2 py-4">
-            <button
-              class="w-full py-2 bg-[#39B6CC] border-2 border-[#E7F4F5]  text-2xl  font-bold text-white rounded-3xl"
+            <a
+              [routerLink]="'/renew-license-packages'"
             >
-              Renew License
-            </button>
+            <div class="w-full py-2 bg-[#39B6CC] border-2 border-[#E7F4F5]  text-2xl  font-bold text-white rounded-3xl text-center">Renew License</div>
+            </a>
           </div>
         </div>
       </div>
