@@ -19,8 +19,10 @@ import { OneDrillerContactComponent } from '../../components/one-driller-contact
   ],
   template: `
     <div class="bg-[#E7F4F5] p-3">
-      <div class="bg-white p-4 rounded-md flex  justify-between gap-5">
-        <div class="flex gap-5 items-center">
+      <div
+        class="bg-white p-4 rounded-md flex flex-col md:flex-row  justify-between gap-5"
+      >
+        <div class="flex   flex-col sm:flex-row gap-5 items-center">
           <img src="../../../assets/dummyLogo.png" alt="" class="w-[150px]" />
           <div class="text-[#121212] text-center">
             <p class="text-3xl">Hyrdo Engineering Service Limited</p>
@@ -46,10 +48,12 @@ import { OneDrillerContactComponent } from '../../components/one-driller-contact
           </div>
         </div>
       </div>
-      <div class="flex p-4 gap-5">
-        <div class="w-[60%] grid grid-cols-4 gap-5">
+      <div class="flex flex-col sm:flex-row p-4 gap-5">
+        <div
+          class="w-full sm:w-[70%] lg:w-[60%] grid grid-cols-2 lg:grid-cols-4 gap-5"
+        >
           <div class="bg-white rounded-xl p-3 text-center">
-            <div class="flex gap-2 justify-between items-center">
+            <div class="flex gap-5 items-center">
               <img src="../../../assets/otherTab3.png" alt="" />
               <p class="text-[#0CB9DE] font-bold">WELL WATER ANALYSIS</p>
             </div>
@@ -59,7 +63,7 @@ import { OneDrillerContactComponent } from '../../components/one-driller-contact
             </div>
           </div>
           <div class="bg-white rounded-xl p-3 text-center">
-            <div class="flex gap-2 justify-between items-center">
+            <div class="flex gap-5 items-center">
               <img src="../../../assets/otherTab3.png" alt="" />
               <p class="text-[#0CB9DE] font-bold">WELL WATER ANALYSIS</p>
             </div>
@@ -69,7 +73,7 @@ import { OneDrillerContactComponent } from '../../components/one-driller-contact
             </div>
           </div>
           <div class="bg-white rounded-xl p-3 text-center">
-            <div class="flex gap-2 justify-between items-center">
+            <div class="flex gap-5 items-center">
               <img src="../../../assets/otherTab3.png" alt="" />
               <p class="text-[#0CB9DE] font-bold">WELL WATER ANALYSIS</p>
             </div>
@@ -79,7 +83,7 @@ import { OneDrillerContactComponent } from '../../components/one-driller-contact
             </div>
           </div>
           <div class="bg-white rounded-xl p-3 text-center">
-            <div class="flex gap-2 justify-between items-center">
+            <div class="flex gap-5 items-center">
               <img src="../../../assets/otherTab3.png" alt="" />
               <p class="text-[#0CB9DE] font-bold">WELL WATER ANALYSIS</p>
             </div>
@@ -89,7 +93,9 @@ import { OneDrillerContactComponent } from '../../components/one-driller-contact
             </div>
           </div>
         </div>
-        <div class="w-[40%] grid grid-cols-2 gap-5">
+        <div
+          class="w-full sm:w-[30%] lg:w-[40%] grid grid-cols-1 grid-rows-2 lg:grid-rows-1 lg:grid-cols-2 gap-5"
+        >
           <div class="bg-white rounded-xl p-3 text-center">
             <div class="flex gap-2 justify-center items-center">
               <img src="../../../assets/award.svg" alt="" class="w-5 h-5" />
@@ -145,7 +151,7 @@ import { OneDrillerContactComponent } from '../../components/one-driller-contact
         </div>
       </div>
       <div class="my-2">
-        <div class="flex ">
+        <div class="flex w-[1000px] overflow-x-auto ">
           <button
             class="bg-inherit border-b-4 px-4  "
             [ngClass]="{ 'border-b-[#0CB9DE] ': activeTab === 0 }"
