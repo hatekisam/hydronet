@@ -9,6 +9,10 @@ import { ValidateDrillSearchResultsComponent } from './pages/validate-drill-sear
 import { RenewLicenseComponent } from './pages/renew-license/renew-license.component';
 import { OneDrillerComponent } from './pages/one-driller/one-driller.component';
 import { RenewLicensePackagesComponent } from './pages/renew-license-packages/renew-license-packages.component';
+import { MainComponent } from './pages/main/main.component';
+import { MainHomeComponent } from './pages/main-home/main-home.component';
+import { MainSearchComponent } from './pages/main-search/main-search.component';
+import { MainRegisterComponent } from './pages/main-register/main-register.component';
 
 export const routes: Routes = [
   {
@@ -54,20 +58,20 @@ export const routes: Routes = [
     component: OneDrillerComponent,
   },
   {
-    path: 'home',
-    component: HomeComponent,
+    path: 'main',
+    component: MainComponent,
     children: [
       {
         path: '',
-        component: ValidateDrillerComponent,
+        component: MainHomeComponent,
       },
       {
         path: 'search',
-        component: RenewComponent,
+        component: MainSearchComponent,
       },
       {
         path: 'register',
-        component: HomeComponent,
+        component: MainRegisterComponent,
         children: [
           {
             path: 'company',
