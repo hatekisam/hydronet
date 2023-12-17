@@ -6,8 +6,10 @@ import { Component } from '@angular/core';
   imports: [],
   template: `
     <div class="bg-white p-4 rounded-b-xl px-5">
-      <div class="flex gap-5 rounded-3xl border p-4 shadow-md  px-16">
-        <div class="w-[50%]">
+      <div
+        class="flex flex-col md:flex-row gap-5 rounded-3xl border p-4 shadow-md  px-6 md:px-16"
+      >
+        <div class="w-full md:w-[50%]">
           <p class="text-[#121212] text-[32px] font-bold">
             Get in <span class="text-[#0CB9DE]">touch</span>
           </p>
@@ -66,7 +68,7 @@ import { Component } from '@angular/core';
             />
           </form>
         </div>
-        <div class="w-[50%] border-[30px] border-[#0CB9DE]">
+        <div class="w-full md:w-[50%] border-[30px] border-[#0CB9DE]">
           <p>Map</p>
         </div>
       </div>
