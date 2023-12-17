@@ -6,9 +6,9 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-one-driller-about',
   standalone: true,
-  imports: [ReviewComponent,CommonModule],
+  imports: [ReviewComponent, CommonModule],
   template: `
-    <div class="grid grid-cols-2 gap-5 p-4">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-5 p-4">
       <div class="bg-white p-4 rounded-lg">
         <p class="text-center font-bold text-[32px] text-[#121212] my-2">
           Company Profile
@@ -79,8 +79,10 @@ import { CommonModule } from '@angular/common';
         </p>
       </div>
       <div>
-        <div class="bg-white p-4 rounded-lg flex items-center gap-3">
-          <div class="w-[60%]">
+        <div
+          class="bg-white p-4 rounded-lg flex flex-col sm:flex-row items-center gap-3"
+        >
+          <div class="w-full sm:w-[60%]">
             <p class="text-[#121212]">LSWRC Ratinig</p>
             <div class="flex gap-2 items-center">
               <img src="../../../assets/onBoarding.svg" alt="" />
@@ -175,7 +177,7 @@ import { CommonModule } from '@angular/common';
           </div>
         </div>
         <div class="bg-white p-4 rounded-lg mt-4">
-          <div class="flex justify-center gap-10 items-center">
+          <div class="flex  flex-col sm:flex-row justify-center gap-4 sm:gap-10 items-center">
             <div class=" p-3 text-center">
               <div class="flex gap-2  justify-center items-center">
                 <p class="text-[#0CB9DE] text-6xl font-bold">5</p>

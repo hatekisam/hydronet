@@ -69,7 +69,17 @@ import { Component } from '@angular/core';
           </form>
         </div>
         <div class="w-full md:w-[50%] border-[30px] border-[#0CB9DE]">
-          <p>Map</p>
+          <iframe
+          class="w-full h-full"
+            style="border:0"
+            loading="lazy"
+            allowfullscreen
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps/embed/v1/place?key=API_KEY
+    &q=Space+Needle,Seattle+WA"
+          >
+          </iframe
+          >
         </div>
       </div>
     </div>
