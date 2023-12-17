@@ -7,7 +7,7 @@ import { HomeSidebarComponent } from '../../components/home-sidebar/home-sidebar
   imports: [HomeSidebarComponent],
   template: `
     <div
-      class="bg-[url('/assets/homeImage.png')]   bg-no-repeat h-screen w-screen flex items-center justify-center flex-col lg:px-28 px-10  bg-cover "
+      class="bg-[url('/assets/homeImage.png')]   bg-no-repeat min-h-screen h-full py-20 pt-32  w-screen flex items-center justify-center flex-col lg:px-28 px-10  bg-cover "
     >
       <app-home-sidebar />
       <p
@@ -26,6 +26,7 @@ import { HomeSidebarComponent } from '../../components/home-sidebar/home-sidebar
         Enter you Lagos State Water Regulatory Commssions’ Issued Identification
         Number
       </p>
+      <img src="../../../assets/renewProBar.png" alt="" class="w-[900px] md:w-full" />
       <div class="p-5 rounded-xl bg-[#D1F4F7] border  my-4">
         <p class="text-xl text-[#262729] font-bold mb-3">License Renewal</p>
         <div
