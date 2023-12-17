@@ -5,7 +5,7 @@ interface SubLinks {
 
 export interface MainSideLink {
   title: string;
-  to: string;
+  to?: string;
   image: string;
-  subroutes: SubLinks[];
+  subroutes?: SubLinks[];
 }
