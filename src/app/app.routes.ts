@@ -53,4 +53,40 @@ export const routes: Routes = [
     path: 'driller/:id',
     component: OneDrillerComponent,
   },
+  {
+    path: 'home',
+    component: HomeComponent,
+    children: [
+      {
+        path: '',
+        component: ValidateDrillerComponent,
+      },
+      {
+        path: 'search',
+        component: RenewComponent,
+      },
+      {
+        path: 'register',
+        component: HomeComponent,
+        children: [
+          {
+            path: 'company',
+            component: ValidateDrillerComponent,
+          },
+          {
+            path: 'permit-certificates',
+            component: RenewComponent,
+          },
+          {
+            path: 'user-accounts',
+            component: ApplyDrillerComponent,
+          },
+          {
+            path: 'payment',
+            component: ApplyBoreholeComponent,
+          },
+        ],
+      },
+    ],
+  },
 ];
