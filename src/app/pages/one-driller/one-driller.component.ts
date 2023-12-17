@@ -4,6 +4,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { OneDrillerBriefComponent } from '../../components/one-driller-brief/one-driller-brief.component';
 import { OneDrillerTrackRecordsComponent } from '../../components/one-driller-track-records/one-driller-track-records.component';
 import { OneDrillerAboutComponent } from '../../components/one-driller-about/one-driller-about.component';
+import { OneDrillerContactComponent } from '../../components/one-driller-contact/one-driller-contact.component';
 
 @Component({
   selector: 'app-one-driller',
@@ -14,6 +15,7 @@ import { OneDrillerAboutComponent } from '../../components/one-driller-about/one
     OneDrillerBriefComponent,
     OneDrillerTrackRecordsComponent,
     OneDrillerAboutComponent,
+    OneDrillerContactComponent,
   ],
   template: `
     <div class="bg-[#E7F4F5] p-3">
@@ -190,7 +192,7 @@ import { OneDrillerAboutComponent } from '../../components/one-driller-about/one
           <p>Equipments content goes here.</p>
         </div>
         <div *ngIf="activeTab === 3">
-          <p>Contact Us content goes here.</p>
+          <app-one-driller-contact />
         </div>
         <div *ngIf="activeTab === 4">
           <app-one-driller-about />
@@ -200,7 +202,7 @@ import { OneDrillerAboutComponent } from '../../components/one-driller-about/one
   `,
 })
 export class OneDrillerComponent {
-  activeTab = 4;
+  activeTab = 3;
   changeActive(tab: number) {
     this.activeTab = tab;
   }

@@ -5,12 +5,72 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   template: `
-    <p>
-      one-driller-contact works!
-    </p>
+    <div class="bg-white p-4 rounded-b-xl px-5">
+      <div class="flex gap-5 rounded-3xl border p-4 shadow-md  px-16">
+        <div class="w-[50%]">
+          <p class="text-[#121212] text-[32px] font-bold">
+            Get in <span class="text-[#0CB9DE]">touch</span>
+          </p>
+          <p class="text-[#121212] text-[11px]">
+            Enim tempor eget pharetra facilisis sed maecenas adipiscing. Eu leo
+            molestie vel, ornare non id blandit netus.
+          </p>
+          <form>
+            <input
+              type="text"
+              class="px-5 py-2  bg-inherit outline-none border-b-[#121212] border-b w-full "
+              placeholder="Contact name"
+            />
+            <input
+              type="text"
+              class="px-5 py-2  bg-inherit outline-none border-b-[#121212] border-b w-full "
+              placeholder="Street"
+            />
+            <div class="flex gap-2 items-center">
+              <input
+                type="text"
+                class="px-5 py-2  bg-inherit outline-none border-b-[#121212] border-b w-[70%] "
+                placeholder="Contact name"
+              />
+              <input
+                type="text"
+                class="px-5 py-2  bg-inherit outline-none border-b-[#121212] border-b w-[30%]"
+                placeholder="Contact name"
+              />
+            </div>
+            <input
+              type="text"
+              class="px-5 py-2  bg-inherit outline-none border-b-[#121212] border-b w-full "
+              placeholder="Contact Phone"
+            />
+            <input
+              type="text"
+              class="px-5 py-2  bg-inherit outline-none border-b-[#121212] border-b w-full "
+              placeholder="Email"
+            />
+            <input
+              type="text"
+              class="px-5 py-2  bg-inherit outline-none border-b-[#121212] border-b w-full "
+              placeholder="Let's talk your idea"
+            />
+            <div class="flex gap-2 items-center my-2">
+              <input type="checkbox" name="" id="" />
+              <p class="text-[11px] text-[#121212]">
+                I want to protect my data by signing an NDA
+              </p>
+            </div>
+            <input
+              type="submit"
+              value="Submit"
+              class="text-white bg-[#0CB9DE] w-full py-2 rounded-full font-bold"
+            />
+          </form>
+        </div>
+        <div class="w-[50%] border-[30px] border-[#0CB9DE]">
+          <p>Map</p>
+        </div>
+      </div>
+    </div>
   `,
-  styleUrl: './one-driller-contact.component.css'
 })
-export class OneDrillerContactComponent {
-
-}
+export class OneDrillerContactComponent {}
