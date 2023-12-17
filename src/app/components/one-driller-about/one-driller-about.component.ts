@@ -79,7 +79,56 @@ import { Component } from '@angular/core';
         <div class="bg-white p-4 rounded-lg grid grid-cols-2">
           <div>
             <p class="text-[#121212]">LSWRC Ratinig</p>
-            
+            <div class="flex gap-2 items-center">
+              <img src="../../../assets/onBoarding.svg" alt="" />
+              <p>Onboarding</p>
+              <div class="relative w-[100px] bg-gray-100 h-2 rounded-full">
+                <div
+                  class="absolute top-0 left-0 bg-[#0CB9DE] w-[85%] h-full rounded-full"
+                ></div>
+              </div>
+              <p>8.5</p>
+            </div>
+            <div class="flex gap-2 items-center">
+              <img src="../../../assets/responsiveness.svg" alt="" />
+              <p>Responsiveness</p>
+              <div class="relative w-[100px] bg-gray-100 h-2 rounded-full">
+                <div
+                  class="absolute top-0 left-0 bg-[#0CB9DE] w-[85%] h-full rounded-full"
+                ></div>
+              </div>
+              <p>8.5</p>
+            </div>
+            <div class="flex gap-2 items-center">
+              <img src="../../../assets/communication.svg" alt="" />
+              <p>Communication</p>
+              <div class="relative w-[100px] bg-gray-100 h-2 rounded-full">
+                <div
+                  class="absolute top-0 left-0 bg-[#0CB9DE] w-[85%] h-full rounded-full"
+                ></div>
+              </div>
+              <p>8.5</p>
+            </div>
+            <div class="flex gap-2 items-center">
+              <img src="../../../assets/tenant.svg" alt="" />
+              <p>Tenant Experience</p>
+              <div class="relative w-[100px] bg-gray-100 h-2 rounded-full">
+                <div
+                  class="absolute top-0 left-0 bg-[#0CB9DE] w-[85%] h-full rounded-full"
+                ></div>
+              </div>
+              <p>8.5</p>
+            </div>
+            <div class="flex gap-2 items-center">
+              <img src="../../../assets/landlord.svg" alt="" />
+              <p>Landlord Experience</p>
+              <div class="relative w-[100px] bg-gray-100 h-2 rounded-full">
+                <div
+                  class="absolute top-0 left-0 bg-[#0CB9DE] w-[85%] h-full rounded-full"
+                ></div>
+              </div>
+              <p>8.5</p>
+            </div>
           </div>
         </div>
         <div class="bg-white p-4 rounded-lg"></div>
