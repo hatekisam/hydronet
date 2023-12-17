@@ -9,10 +9,10 @@ import { CommonModule } from '@angular/common';
   imports: [MatProgressBarModule, CommonModule],
   template: `
     <div
-      class="bg-white p-2 shadow-md flex flex-col sm:flex-row gap-5 rounded-md text-black"
+      class="bg-white p-2 shadow-md flex flex-col lg:flex-row gap-5 rounded-md text-black"
     >
       <div
-        class="flex flex-col sm:flex-row justify-between items-center gap-3 w-full sm:w-[45%]"
+        class="flex flex-col sm:flex-row justify-between items-center gap-3 w-full lg:w-[45%]"
       >
         <img
           [src]="oneChoice.image"
@@ -68,7 +68,7 @@ import { CommonModule } from '@angular/common';
           </div>
         </div>
       </div>
-      <div class="my-2 text-[#525967] text-[13px] w-full sm:w-[55%]">
+      <div class="my-2 text-[#525967] text-[13px] w-full lg:w-[55%]">
         <div *ngIf="oneChoice.body.length >= 500; else fullBody">
           <p>{{ oneChoice.body.slice(0, 500) }}</p>
           <a href="" class="text-gray-400">more</a>

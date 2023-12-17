@@ -9,7 +9,6 @@ import { Component } from '@angular/core';
       circlura-progress works!
     </p>
   `,
-  styleUrl: './circlura-progress.component.css'
 })
 export class CircluraProgressComponent {
 
