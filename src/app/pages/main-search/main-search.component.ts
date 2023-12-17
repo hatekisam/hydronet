@@ -9,7 +9,6 @@ import { Component } from '@angular/core';
       main-search works!
     </p>
   `,
-  styleUrl: './main-search.component.css'
 })
 export class MainSearchComponent {
 

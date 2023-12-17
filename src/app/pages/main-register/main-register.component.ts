@@ -1,16 +1,14 @@
 import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-main-register',
   standalone: true,
-  imports: [],
+  imports: [RouterOutlet],
   template: `
-    <p>
-      main-register works!
-    </p>
+    <div class="flex gap-2">
+      <router-outlet></router-outlet>
+    </div>
   `,
-  styleUrl: './main-register.component.css'
 })
-export class MainRegisterComponent {
-
-}
+export class MainRegisterComponent {}
