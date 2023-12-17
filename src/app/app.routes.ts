@@ -13,6 +13,8 @@ import { MainComponent } from './pages/main/main.component';
 import { MainHomeComponent } from './pages/main-home/main-home.component';
 import { MainSearchComponent } from './pages/main-search/main-search.component';
 import { MainRegisterComponent } from './pages/main-register/main-register.component';
+import { MainRegisterCompanyComponent } from './pages/main-register-company/main-register-company.component';
+import { MainRegisterPermitCertificatesComponent } from './pages/main-register-permit-certificates/main-register-permit-certificates.component';
 
 export const routes: Routes = [
   {
@@ -75,11 +77,11 @@ export const routes: Routes = [
         children: [
           {
             path: 'company',
-            component: ValidateDrillerComponent,
+            component: MainRegisterCompanyComponent,
           },
           {
             path: 'permit-certificates',
-            component: RenewComponent,
+            component: MainRegisterPermitCertificatesComponent,
           },
           {
             path: 'user-accounts',
