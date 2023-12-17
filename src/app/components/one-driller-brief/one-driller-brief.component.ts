@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   template: `
-    <div class="bg-white p-4 rounded-b-xl">
+    <div class="bg-white p-4 rounded-b-xl text-[#121212]">
       Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod fuga dicta
       a, recusandae magni deleniti repellendus. Quia amet tempora officia eius,
       laboriosam ullam minus voluptas voluptates dicta molestias nulla fugit!
