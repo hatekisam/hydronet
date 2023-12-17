@@ -7,9 +7,11 @@ import { MainSideBarComponent } from '../../components/main-side-bar/main-side-b
   standalone: true,
   imports: [RouterOutlet, MainSideBarComponent],
   template: `
-    <div class="flex gap-2 items-center">
+    <div class="flex gap-2 items-center bg-[#E7F4F5] h-[88%] overflow-hidden">
       <app-main-side-bar />
-      <router-outlet></router-outlet>
+      <div class="h-full overflow-y-auto">
+        <router-outlet></router-outlet>
+      </div>
     </div>
   `,
 })

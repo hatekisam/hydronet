@@ -10,9 +10,9 @@ import { MainSideBarLinkComponent } from '../main-side-bar-link/main-side-bar-li
   template: `
     <div
       [ngClass]="{ 'w-[20vw]': showText, 'w-auto': !showText }"
-      class=" transition-all duration-200 flex items-center justify-center p-4 "
+      class=" transition-all duration-200 flex items-center justify-center p-4 h-full "
     >
-      <div class="w-full">
+      <div class="w-full  h-full">
         <div class="bg-[#63CCD3] rounded-t-xl p-4 flex gap-1">
           <div class="flex p-1 bg-[#B4E8EC] rounded-full w-full">
             <button
@@ -86,10 +86,10 @@ import { MainSideBarLinkComponent } from '../main-side-bar-link/main-side-bar-li
             </div>
           </div>
         </div>
-        <ng-container *ngIf="showText">
+        <!-- <ng-container *ngIf="showText">
           <p>This is some text content.</p>
           <button (click)="toggleState()">Resize</button>
-        </ng-container>
+        </ng-container> -->
       </div>
     </div>
   `,

@@ -7,7 +7,7 @@ import { MainSideBarComponent } from '../../components/main-side-bar/main-side-b
   standalone: true,
   imports: [RouterOutlet, MainSideBarComponent],
   template: `
-    <div>
+    <div class="h-full">
       <router-outlet></router-outlet>
     </div>
   `,
