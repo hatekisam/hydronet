@@ -10,7 +10,9 @@ import { HomeSidebarComponent } from '../../components/home-sidebar/home-sidebar
       class="bg-[url('/assets/homeImage.png')]   bg-no-repeat h-screen w-screen flex items-center justify-center flex-col lg:px-28 px-10  bg-cover "
     >
       <app-home-sidebar />
-      <p class=" text-[#96E8EE] text-4xl text-center font-[Moul] font-extrabold mb-10">
+      <p
+        class=" text-[#96E8EE] text-4xl text-center font-[Moul] font-extrabold mb-10"
+      >
         Borehole Driller License Renewal
         <span class="text-[#19B6D1]">Lagos State</span>
       </p>
@@ -33,10 +35,10 @@ import { HomeSidebarComponent } from '../../components/home-sidebar/home-sidebar
           <input
             type="text"
             placeholder="Enter Your LSWRCUID"
-            class="border-none outline-none px-4 py-2 text-sm w-[350px]"
+            class="border-none outline-none px-4 py-2 text-sm w-[70%]"
           />
           <button
-            class="flex items-center gap-4 px-4 py-1 bg-[#63CCD3] rounded-full text-white font-bold"
+            class="flex items-center gap-4 px-2 py-1 bg-[#63CCD3] rounded-full text-white font-bold"
           >
             <img src="../../../assets/search.svg" alt="" class="w-5 h-5" />
             <p class="text-[12px]">Search</p>
@@ -44,7 +46,7 @@ import { HomeSidebarComponent } from '../../components/home-sidebar/home-sidebar
         </div>
       </div>
       <div
-        class=" bg-[rgba(98,204,211,0.75)] p-5 flex items-center rounded-3xl gap-5 shadow-md shadow-gray-200"
+        class=" bg-[rgba(98,204,211,0.75)] p-5 w-full md:w-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 rounded-3xl gap-5 shadow-md shadow-gray-200"
       >
         <div class="flex  gap-2">
           <div
@@ -60,7 +62,7 @@ import { HomeSidebarComponent } from '../../components/home-sidebar/home-sidebar
             </p>
           </div>
         </div>
-        <div class="h-full w-0.5 bg-[#F0F0F0]"></div>
+        <!-- <div class="h-full w-0.5 bg-[#F0F0F0]"></div> -->
         <div class="flex items-center gap-2">
           <div
             class="p-2 rounded-full bg-gradient-to-r from-[#D3FFE7] to-[#EFFFF6] w-14 h-14 flex items-center justify-center"
@@ -75,7 +77,7 @@ import { HomeSidebarComponent } from '../../components/home-sidebar/home-sidebar
             </p>
           </div>
         </div>
-        <div class="h-full w-0.5 bg-[#F0F0F0]"></div>
+        <!-- <div class="h-full w-0.5 bg-[#F0F0F0]"></div> -->
         <div class="flex items-center gap-2">
           <div
             class="p-2 rounded-full bg-gradient-to-r from-[#D3FFE7] to-[#EFFFF6] w-14 h-14 flex items-center justify-center"
@@ -90,7 +92,7 @@ import { HomeSidebarComponent } from '../../components/home-sidebar/home-sidebar
             </p>
           </div>
         </div>
-        <div class="h-full w-0.5 bg-[#F0F0F0]"></div>
+        <!-- <div class="h-full w-0.5 bg-[#F0F0F0]"></div> -->
         <div class="flex items-center gap-2">
           <div
             class="p-2 rounded-full bg-gradient-to-r from-[#D3FFE7] to-[#EFFFF6] w-14 h-14 flex items-center justify-center"
@@ -108,6 +110,5 @@ import { HomeSidebarComponent } from '../../components/home-sidebar/home-sidebar
       </div>
     </div>
   `,
-  styleUrl: './renew.component.css',
 })
 export class RenewComponent {}
