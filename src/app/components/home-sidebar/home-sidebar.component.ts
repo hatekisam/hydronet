@@ -8,8 +8,12 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [HomeSidebarLinkComponent, CommonModule],
   template: `
-    <div class="absolute  sm:w-auto w-full  lg:left-0 top-20 lg:px-0 px-1 left-[30%] -translate-x-[120px] sm:-translate-x-[90px] lg:-translate-x-0 lg:top-1/2 transform -translate-y-1/2 z-20 ">
-      <div class="border-4 lg:gap-0 gap-4 border-[#39B6CC] lg:rounded-none rounded-md lg:rounded-r-3xl flex-row flex lg:flex-col lg:w-[100px] bg-white">
+    <div
+      class=" w-full top-0 left-0 absolute lg:top-1/2 lg:left-0 transform lg:-translate-y-1/2 z-20 px-2 "
+    >
+      <div
+        class="lg:border-4 border-0 border-b-4 lg:gap-0 gap-4 border-[#39B6CC] lg:rounded-none rounded-b-md lg:rounded-r-3xl flex-row justify-between flex lg:flex-col lg:w-[100px] bg-white px-2"
+      >
         <app-home-sidebar-link *ngFor="let link of links" [link]="link" />
       </div>
     </div>
@@ -18,31 +22,31 @@ import { CommonModule } from '@angular/common';
 export class HomeSidebarComponent {
   links: HomeSideLink[] = [
     {
-      id:1,
+      id: 1,
       title: 'Validate Driller Permit',
       icon: '/assets/homeSideIcon.svg',
       to: '',
     },
     {
-      id:2,
+      id: 2,
       title: 'Renew Permit',
       icon: '/assets/homeSideIcon.svg',
       to: 'renew',
     },
     {
-      id:3,
+      id: 3,
       title: 'Apply for Driller License',
       icon: '/assets/homeSideIcon.svg',
       to: 'apply-driller',
     },
     {
-      id:4,
+      id: 4,
       title: 'Apply for Borehole Permit',
       icon: '/assets/homeSideIcon.svg',
       to: '',
     },
     {
-      id:5,
+      id: 5,
       title: 'Request Water Test/Analysis',
       icon: '/assets/homeSideIcon.svg',
       to: '',

@@ -54,7 +54,7 @@ import { CommonModule } from '@angular/common';
           <p>{{ oneChoice.body }}</p>
         </ng-template>
       </div>
-      <div class="flex gap-2 text-[13px] font-medium">
+      <div class="flex flex-col sm:flex-row gap-2 text-[13px] font-medium">
         <button class=" rounded-md bg-[#39B6CC] text-white px-4 py-1">
           Contact Driller
         </button>

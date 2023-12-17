@@ -19,7 +19,7 @@ import { HomeSidebarComponent } from '../../components/home-sidebar/home-sidebar
   template: `
     <div class="   bg-[#B5E0E8] ">
       <div
-        class="relative h-screen w-full flex items-center justify-center flex-col  lg:px-28 px-10  bg-[url('/assets/homeImage.png')]  bg-no-repeat bg-cover "
+        class="relative w-full flex items-center justify-center flex-col  lg:px-28 px-10  bg-[url('/assets/homeImage.png')]  bg-no-repeat bg-cover  py-20"
       >
         <app-home-sidebar />
         <p
@@ -39,7 +39,7 @@ import { HomeSidebarComponent } from '../../components/home-sidebar/home-sidebar
           borehole water Drillers with the LSWRC for your borehole water
           Drilling needs.
         </p>
-        <div class="p-5 rounded-xl bg-[#D1F4F7] border  my-4 ">
+        <div class="p-5 rounded-xl bg-[#D1F4F7] border  m-4">
           <div class="flex justify-between items-center gap-20 mb-4">
             <div class="flex items-center gap-2 font-bold text-xl">
               <p>FIND</p>
@@ -76,11 +76,11 @@ import { HomeSidebarComponent } from '../../components/home-sidebar/home-sidebar
               <input
                 type="text"
                 placeholder="UIDD"
-                class="border-none outline-none px-4 py-1"
+                class="border-none outline-none px-4 py-1 w-[70%] bg-red-500"
               />
               <a
                 [routerLink]="'search'"
-                class="flex items-center gap-4 px-4 py-1 bg-[#63CCD3] rounded-full text-white font-bold"
+                class="flex items-center gap-2 px-2 py-1 bg-[#63CCD3] rounded-full text-white font-bold"
               >
                 <img src="../../../assets/search.svg" alt="" class="w-5 h-5" />
                 <p class="text-[12px]">Search</p>

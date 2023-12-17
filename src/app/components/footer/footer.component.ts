@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
   template: `
     <div class="bg-[#21484F] p-5 text-white mx-1">
       <div class="mx-4 bg-white h-1 rounded-full"></div>
-      <div class="flex gap-5 justify-between px-6 py-3">
+      <div class="flex  flex-col md:flex-row gap-5 justify-between px-6 py-3">
         <div>
           <p class="text-xl font-extrabold mb-3">Services</p>
           <div class="flex flex-col gap-2">
