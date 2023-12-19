@@ -1,17 +1,18 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { UploadFileComponent } from '../upload-file/upload-file.component';
 
 @Component({
   selector: 'app-main-reg-comp1',
   standalone: true,
-  imports: [],
+  imports: [UploadFileComponent],
   template: `
     <div class="p-5 h-full overflow-y-auto">
       <div class="flex items-center justify-center">
         <img src="../../../assets/companyRegProgress1.png" alt="" />
       </div>
-      <div class="bg-white p-2 rounded-md my-4 ">
-        <div class="flex gap-5 rounded-md border p-4 shadow-md ">
-          <div class="w-[50%]">
+      <div class="bg-white p-2 rounded-md my-4  ">
+        <div class="flex gap-5 rounded-md  p-4 ">
+          <div class="w-[50%] shadow-md  bg-white p-4 rounded-md">
             <p class="text-[#121212] text-[20px] font-bold">
               Tell us more about your business
             </p>
@@ -76,6 +77,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
                 Attach Company Logo and Cover Page Image your files should not
                 exceed 2MB
               </p>
+              <app-upload-file />
               <div class="flex gap-2 items-center my-2">
                 <input type="checkbox" name="" id="" />
                 <p class="text-[11px] text-[#121212]">

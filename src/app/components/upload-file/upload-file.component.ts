@@ -2,8 +2,10 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-upload-file',
+  standalone: true,
+  imports: [],
   template: `
-    <label for="fileInput" class="upload-box" (click)="fileInput.click()">
+    <div for="fileInput" class="upload-box" (click)="fileInput.click()">
       <input
         type="file"
         id="fileInput"
@@ -12,13 +14,12 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
       />
       <div class="upload-icon">📂</div>
       <div class="upload-text">{{ fileName || 'Click to select a file' }}</div>
-    </label>
+    </div>
   `,
   styles: [
     `
       .upload-box {
         border: 2px dashed #ccc;
-        padding: 20px;
         text-align: center;
         cursor: pointer;
       }
