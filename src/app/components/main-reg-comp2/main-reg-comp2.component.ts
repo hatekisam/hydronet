@@ -12,17 +12,29 @@ import { Component, Input } from '@angular/core';
       <div class="flex gap-5 rounded-md border p-4 shadow-md ">
         <div class="w-[50%]">
           <p class="text-[#121212] text-[20px] font-bold">
-            Tell us more about your business
+            Enter your business registration information
           </p>
           <p class="text-[#121212] text-[11px]">
-            As a regulatory commission, we would need to verify your
-            identification and business registration Information
+            Provide your registered business details, so Paystack can verify
+            your business information.
           </p>
           <form>
+            <div class="my-2 flex gap-10">
+              <div class="px-2 py-1 rounded-md border flex gap-2 items-center text-[#5D5FEF]">
+                <input type="radio" class="border-[#5D5FEF] " />
+                <p>Business Name</p>
+                <p></p>
+              </div>
+              <div class="px-2 py-1 rounded-md border flex gap-2 items-center text-[#5D5FEF]">
+                <input type="radio" class="border-[#5D5FEF] " />
+                <p>Limited</p>
+                <p></p>
+              </div>
+            </div>
             <input
               type="text"
               class="px-5 py-2  bg-inherit outline-none border-b-[#121212] border-b w-full "
-              placeholder="Company  name"
+              placeholder="RC/BN"
             />
             <input
               type="text"
@@ -54,23 +66,8 @@ import { Component, Input } from '@angular/core';
             <input
               type="text"
               class="px-5 py-2  bg-inherit outline-none border-b-[#121212] border-b w-full "
-              placeholder="Tell Brief About Your Company"
+              placeholder="TAX No."
             />
-            <div class="flex gap-2 items-center">
-              <select
-                class="px-5 py-2  bg-inherit outline-none border-b-[#121212] border-b w-[50%] "
-              >
-                <option value="">Select your company category</option>
-                <option value="">Select your company category</option>
-                <option value="">Select your company category</option>
-              </select>
-              <div class="flex gap-2 items-center my-2 w-[50%]">
-                <input type="checkbox" name="" id="" />
-                <p class="text-[11px] text-[#121212]">
-                  Activate Hydronet Application
-                </p>
-              </div>
-            </div>
             <p class="text-[#8E8E8E] text-[13px]">
               Attach Company Logo and Cover Page Image your files should not
               exceed 2MB

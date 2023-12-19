@@ -31,7 +31,7 @@ import { MainRegComp3Component } from '../../components/main-reg-comp3/main-reg-
   `,
 })
 export class MainRegisterCompanyComponent {
-  activeTab = 0;
+  activeTab = 1;
   changeTab(event: any) {
     // Change activeTab directly
     this.activeTab = event;
