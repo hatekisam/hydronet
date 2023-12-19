@@ -68,19 +68,23 @@ import { UploadFileComponent } from '../upload-file/upload-file.component';
                 </select>
                 <div class="flex gap-2 items-center my-2 w-[50%]">
                   <input type="checkbox" name="" id="" />
-                  <p class="text-[11px] text-[#121212]">
+                  <p class="text-[14px] text-[#121212]">
                     Activate Hydronet Application
                   </p>
                 </div>
               </div>
-              <p class="text-[#8E8E8E] text-[13px]">
-                Attach Company Logo and Cover Page Image your files should not
-                exceed 2MB
-              </p>
-              <app-upload-file />
+              <div class="my-2">
+                <p class="text-[#8E8E8E] text-[13px]">
+                  Attach Company Logo and Cover Page Image your files should not
+                  exceed 2MB
+                </p>
+                <div class="w-[60%]">
+                  <app-upload-file />
+                </div>
+              </div>
               <div class="flex gap-2 items-center my-2">
                 <input type="checkbox" name="" id="" />
-                <p class="text-[11px] text-[#121212]">
+                <p class="text-[14px] text-[#121212]">
                   I certify to providing correct and authentic information
                 </p>
               </div>

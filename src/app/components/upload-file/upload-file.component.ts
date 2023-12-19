@@ -5,15 +5,15 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
   standalone: true,
   imports: [],
   template: `
-    <div for="fileInput" class="upload-box" (click)="fileInput.click()">
+    <div for="fileInput" class="upload-box  gap-2  p-8 flex items-center justify-center my-2" (click)="fileInput.click()">
       <input
         type="file"
         id="fileInput"
         #fileInput
         (change)="onFileSelected($event)"
       />
-      <div class="upload-icon">📂</div>
-      <div class="upload-text">{{ fileName || 'Click to select a file' }}</div>
+      <img src="../../../assets/upload.svg" alt="" />
+      <div class="upload-text">{{ fileName || 'Upload Additional file' }}</div>
     </div>
   `,
   styles: [
@@ -22,6 +22,7 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
         border: 2px dashed #ccc;
         text-align: center;
         cursor: pointer;
+        border-radius: 10px;
       }
 
       .upload-icon {
@@ -30,7 +31,7 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
       }
 
       .upload-text {
-        color: #888;
+        color:#8E8E8E;
       }
 
       input[type='file'] {
