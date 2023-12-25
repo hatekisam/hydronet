@@ -15,6 +15,7 @@ import { MainSearchComponent } from './pages/main-search/main-search.component';
 import { MainRegisterComponent } from './pages/main-register/main-register.component';
 import { MainRegisterCompanyComponent } from './pages/main-register-company/main-register-company.component';
 import { MainRegisterPermitCertificatesComponent } from './pages/main-register-permit-certificates/main-register-permit-certificates.component';
+import { MainRegisterUserAccountsComponent } from './pages/main-register-user-accounts/main-register-user-accounts.component';
 
 export const routes: Routes = [
   {
@@ -85,7 +86,7 @@ export const routes: Routes = [
           },
           {
             path: 'user-accounts',
-            component: ApplyDrillerComponent,
+            component: MainRegisterUserAccountsComponent,
           },
           {
             path: 'payment',
