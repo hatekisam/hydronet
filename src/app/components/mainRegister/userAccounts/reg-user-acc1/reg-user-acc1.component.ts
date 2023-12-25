@@ -48,11 +48,13 @@ import { Upload2Component } from '../../../upload2/upload2.component';
                 class="px-5 py-2  bg-inherit outline-none border-b-[#121212] border-b w-full "
                 placeholder="Mobile Number"
               />
-              <input
-                type="submit"
-                value="Save & Signup"
-                class="text-white bg-[#0CB9DE] w-fit py-2 px-5 text-sm rounded-xl font-bold my-2 mx-auto"
-              />
+              <div class="flex items-center justify-center">
+                <input
+                  type="submit"
+                  value="Save & Signup"
+                  class="text-white bg-[#0CB9DE] w-fit py-2 px-5 text-sm rounded-xl font-bold my-2 mx-auto"
+                />
+              </div>
               <div class="flex gap-2 items-center my-2">
                 <input type="checkbox" name="" id="" />
                 <p class="text-[14px] text-[#121212]">
