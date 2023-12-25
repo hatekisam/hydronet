@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { Upload2Component } from '../../../upload2/upload2.component';
 
 @Component({
   selector: 'reg-user-acc1',
   standalone: true,
-  imports: [],
+  imports: [Upload2Component],
   template: `
     <div class="p-5 h-full overflow-y-auto">
       <div class="flex items-center justify-center">
@@ -21,15 +22,19 @@ import { Component } from '@angular/core';
             </p>
             <form>
               <p class="text-[#121212]  font-bold">Personal information</p>
-              <div class="flex gap-2 items-center">
+              <div class="flex items-center gap-2">
+                <img src="../../../assets/person.png" alt="" />
+                <app-upload2-file />
+              </div>
+              <div class="grid grid-cols-2 gap-2">
                 <input
                   type="text"
-                  class="px-5 py-2  bg-inherit outline-none border-b-[#121212] border-b w-[70%] "
+                  class="px-5 py-2  bg-inherit outline-none border-b-[#121212] border-b  "
                   placeholder="FirstName"
                 />
                 <input
                   type="text"
-                  class="px-5 py-2  bg-inherit outline-none border-b-[#121212] border-b w-[30%]"
+                  class="px-5 py-2  bg-inherit outline-none border-b-[#121212] border-b "
                   placeholder="LastName"
                 />
               </div>
@@ -45,8 +50,8 @@ import { Component } from '@angular/core';
               />
               <input
                 type="submit"
-                value="Next"
-                class="text-white bg-[#0CB9DE] w-fit py-2 rounded-xl font-bold my-2 mx-auto"
+                value="Save & Signup"
+                class="text-white bg-[#0CB9DE] w-fit py-2 px-5 text-sm rounded-xl font-bold my-2 mx-auto"
               />
               <div class="flex gap-2 items-center my-2">
                 <input type="checkbox" name="" id="" />
