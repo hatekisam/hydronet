@@ -27,8 +27,8 @@ import { Component } from '@angular/core';
               <img
                 [src]="
                   i % 2 === 0
-                    ? '../../../assets/icons/downTrack.svg'
-                    : '../../../assets/icons/upTrack.svg'
+                    ? '../../../assets/downTrack.svg'
+                    : '../../../assets/upTrack.svg'
                 "
               />
               <p class="text-[#0CB9DE]">{{ year.title }}</p>
@@ -42,8 +42,8 @@ import { Component } from '@angular/core';
               <img
                 [src]="
                   i % 2 === 0
-                    ? '../../../assets/icons/downTrack.svg'
-                    : '../../../assets/icons/upTrack.svg'
+                    ? '../../../assets/downTrack.svg'
+                    : '../../../assets/upTrack.svg'
                 "
               />
             </div>
