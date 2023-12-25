@@ -9,7 +9,6 @@ import { Component } from '@angular/core';
       main-register-permit-certificates works!
     </p>
   `,
-  styleUrl: './main-register-permit-certificates.component.css'
 })
 export class MainRegisterPermitCertificatesComponent {
 

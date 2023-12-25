@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Upload2Component } from '../upload2/upload2.component';
+import { Upload2Component } from '../../../upload2/upload2.component';
 
 @Component({
   selector: 'app-main-reg-comp2',

@@ -1,5 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { UploadFileComponent } from '../upload-file/upload-file.component';
+import { UploadFileComponent } from '../../../upload-file/upload-file.component';
 
 @Component({
   selector: 'app-main-reg-comp1',
