@@ -24,9 +24,6 @@ import { CommonModule } from '@angular/common';
       <div *ngIf="activeTab == 3">
         <reg-dri-per-cer3 />
       </div>
-      <!-- <div *ngIf="activeTab == 4">
-        <app-main-reg-comp4 [changeTab]="changeTab" />
-      </div> -->
     </div>
   `,
 })
