@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { Reveiw } from '../../interfaces/reveiw';
-import { ReviewComponent } from '../review/review.component';
+import { Reveiw } from '../../../interfaces/reveiw';
+import { ReviewComponent } from '../../review/review.component';
 import { CommonModule } from '@angular/common';
 
 @Component({

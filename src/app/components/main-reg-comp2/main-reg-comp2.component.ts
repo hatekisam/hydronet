@@ -1,9 +1,10 @@
 import { Component, Input } from '@angular/core';
+import { Upload2Component } from '../upload2/upload2.component';
 
 @Component({
   selector: 'app-main-reg-comp2',
   standalone: true,
-  imports: [],
+  imports: [Upload2Component],
   template: ` <div class="p-5 h-full overflow-y-auto">
     <div class="flex items-center justify-center">
       <img src="../../../assets/companyRegProgress2.png" alt="" />
@@ -20,12 +21,16 @@ import { Component, Input } from '@angular/core';
           </p>
           <form>
             <div class="my-2 flex gap-10">
-              <div class="px-2 py-1 rounded-md border flex gap-2 items-center text-[#5D5FEF]">
+              <div
+                class="px-2 py-1 rounded-md border flex gap-2 items-center text-[#5D5FEF]"
+              >
                 <input type="radio" class="border-[#5D5FEF] " />
                 <p>Business Name</p>
                 <p></p>
               </div>
-              <div class="px-2 py-1 rounded-md border flex gap-2 items-center text-[#5D5FEF]">
+              <div
+                class="px-2 py-1 rounded-md border flex gap-2 items-center text-[#5D5FEF]"
+              >
                 <input type="radio" class="border-[#5D5FEF] " />
                 <p>Limited</p>
                 <p></p>
@@ -36,33 +41,41 @@ import { Component, Input } from '@angular/core';
               class="px-5 py-2  bg-inherit outline-none border-b-[#121212] border-b w-full "
               placeholder="RC/BN"
             />
-            <input
-              type="text"
-              class="px-5 py-2  bg-inherit outline-none border-b-[#121212] border-b w-full "
-              placeholder="Street"
-            />
-            <div class="flex gap-2 items-center">
-              <input
-                type="text"
-                class="px-5 py-2  bg-inherit outline-none border-b-[#121212] border-b w-[70%] "
-                placeholder="City"
-              />
-              <input
-                type="text"
-                class="px-5 py-2  bg-inherit outline-none border-b-[#121212] border-b w-[30%]"
-                placeholder="Postcode"
-              />
+            <div class="p-3">
+              <div>
+                <p>CAC Document</p>
+                <input
+                  type="text"
+                  class="px-5 py-2  bg-inherit outline-none border-b-[#121212] border-b w-[80%]"
+                />
+                <div class="flex items-center gap-2">
+                  <img src="../../../assets/person.png" alt="" />
+                  <app-upload2-file />
+                </div>
+              </div>
+              <div>
+                <p>CAC Document</p>
+                <input
+                  type="text"
+                  class="px-5 py-2  bg-inherit outline-none border-b-[#121212] border-b w-[80%]"
+                />
+                <div class="flex items-center gap-2">
+                  <img src="../../../assets/person.png" alt="" />
+                  <app-upload2-file />
+                </div>
+              </div>
+              <div>
+                <p>CAC Document</p>
+                <input
+                  type="text"
+                  class="px-5 py-2  bg-inherit outline-none border-b-[#121212] border-b w-[80%]"
+                />
+                <div class="flex items-center gap-2">
+                  <img src="../../../assets/person.png" alt="" />
+                  <app-upload2-file />
+                </div>
+              </div>
             </div>
-            <input
-              type="text"
-              class="px-5 py-2  bg-inherit outline-none border-b-[#121212] border-b w-full "
-              placeholder="Contact Phone"
-            />
-            <input
-              type="text"
-              class="px-5 py-2  bg-inherit outline-none border-b-[#121212] border-b w-full "
-              placeholder="Email"
-            />
             <input
               type="text"
               class="px-5 py-2  bg-inherit outline-none border-b-[#121212] border-b w-full "
