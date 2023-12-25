@@ -8,6 +8,7 @@ import { DrillerLicenseComponent } from '../../components/driller-license/drille
 import { DrillerLicenseProps } from '../../interfaces/driller-license-props';
 import { DrillerLicenseListComponent } from '../../components/driller-license-list/driller-license-list.component';
 import { FeaturedBoxComponent } from '../../components/featured-box/featured-box.component';
+import { FeaturedCarouselComponent } from '../../components/featured-carousel/featured-carousel.component';
 
 @Component({
   selector: 'app-validate-drill-search-results',
@@ -18,6 +19,7 @@ import { FeaturedBoxComponent } from '../../components/featured-box/featured-box
     DrillerLicenseComponent,
     DrillerLicenseListComponent,
     FeaturedBoxComponent,
+    FeaturedCarouselComponent,
   ],
   template: `
     <div>
@@ -28,24 +30,11 @@ import { FeaturedBoxComponent } from '../../components/featured-box/featured-box
           <p class="text-base text-[#46777B]">Results Found</p>
         </div>
         <div class="bg-white rounded-md p-4 border shadow-sm m-2">
-          <div class="px-4 py-2 bg-[#E7F4F5] w-fit rounded-md">
+          <div class="px-10 py-2 bg-[#E7F4F5] w-fit rounded-md">
             <p class="text-[#121212] text-[20px] font-bold">Featured</p>
           </div>
-          <div class="flex gap-2 flex-nowrap w-fit">
-            <app-featured-box
-              *ngFor="let choi of licenseBoxList"
-              [oneChoice]="choi"
-            />
-          </div>
-          <div
-            class="bg-white rounded-md p-4 border shadow-sm  my-2 flex justify-between"
-          >
-            <button>
-              <img src="../../../assets/leftBtn.svg" alt="" class="w-6 h-6" />
-            </button>
-            <button>
-              <img src="../../../assets/rightBtn.svg" alt="" class="w-6 h-6" />
-            </button>
+          <div class="">
+            <app-featured-carousel [licenses]="slides" />
           </div>
         </div>
         <div class="bg-white rounded-md p-4 border shadow-sm m-2">
@@ -119,30 +108,30 @@ import { FeaturedBoxComponent } from '../../components/featured-box/featured-box
             </div>
           </div>
           <div class="hidden sm:block">
-          <div
-            *ngIf="displayWay == 'grid'; else notGridList"
-            class="grid grid-cols-2 gap-2"
-          >
-            <app-driller-license
+            <div
+              *ngIf="displayWay == 'grid'; else notGridList"
+              class="grid grid-cols-2 gap-2"
+            >
+              <app-driller-license
+                *ngFor="let choi of licenseBoxList"
+                [oneChoice]="choi"
+              />
+            </div>
+            <ng-template #notGridList>
+              <div class="grid grid-cols-1 gap-2">
+                <app-driller-license-list
+                  *ngFor="let choi of licenseBoxList"
+                  [oneChoice]="choi"
+                />
+              </div>
+            </ng-template>
+          </div>
+          <div class="grid  sm:hidden grid-cols-1 gap-2">
+            <app-driller-license-list
               *ngFor="let choi of licenseBoxList"
               [oneChoice]="choi"
             />
           </div>
-          <ng-template #notGridList>
-            <div class="grid grid-cols-1 gap-2">
-              <app-driller-license-list
-                *ngFor="let choi of licenseBoxList"
-                [oneChoice]="choi"
-              />
-            </div>
-          </ng-template>
-          </div>
-          <div class="grid  sm:hidden grid-cols-1 gap-2">
-              <app-driller-license-list
-                *ngFor="let choi of licenseBoxList"
-                [oneChoice]="choi"
-              />
-            </div>
         </div>
       </div>
     </div>
@@ -156,6 +145,43 @@ export class ValidateDrillSearchResultsComponent {
   changeDisplayWay(way: 'grid' | 'list') {
     this.displayWay = way;
   }
+  slides = [
+    {
+      image: '../../../assets/licenseImage.png',
+      title: 'License 1',
+      levels: [60, 70, 20, 40],
+      subtitle: 'Subtitle 1',
+      body: 'Description of License 1. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    },
+    {
+      image: '../../../assets/licenseImage.png',
+      title: 'License 2',
+      levels: [80, 50, 30, 60],
+      subtitle: 'Subtitle 2',
+      body: 'Description of License 2. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    },
+    {
+      image: '../../../assets/licenseImage.png',
+      title: 'License 3',
+      levels: [40, 60, 80, 20],
+      subtitle: 'Subtitle 3',
+      body: 'Description of License 3. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    },
+    {
+      image: '../../../assets/licenseImage.png',
+      title: 'License 4',
+      levels: [90, 30, 50, 70],
+      subtitle: 'Subtitle 4',
+      body: 'Description of License 4. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    },
+    {
+      image: '../../../assets/licenseImage.png',
+      title: 'License 5',
+      levels: [50, 80, 40, 90],
+      subtitle: 'Subtitle 5',
+      body: 'Description of License 5. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    },
+  ];
   licenseBoxList: DrillerLicenseProps[] = [
     {
       image: '../../../assets/licenseImage.png',
