@@ -1,8 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { MainRegComp1Component } from '../../components/main-reg-comp1/main-reg-comp1.component';
-import { MainRegComp2Component } from '../../components/main-reg-comp2/main-reg-comp2.component';
-import { MainRegComp3Component } from '../../components/main-reg-comp3/main-reg-comp3.component';
+import { MainRegComp1Component } from '../../components/mainRegister/company/main-reg-comp1/main-reg-comp1.component';
+import { MainRegComp2Component } from '../../components/mainRegister/company/main-reg-comp2/main-reg-comp2.component';
+import { MainRegComp3Component } from '../../components/mainRegister/company/main-reg-comp3/main-reg-comp3.component';
 
 @Component({
   selector: 'app-main-register-company',
