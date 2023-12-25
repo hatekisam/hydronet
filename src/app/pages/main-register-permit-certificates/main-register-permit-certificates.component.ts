@@ -31,7 +31,7 @@ import { CommonModule } from '@angular/common';
   `,
 })
 export class MainRegisterPermitCertificatesComponent {
-  activeTab = 1;
+  activeTab = 0;
   changeTab(event: any) {
     // Change activeTab directly
     this.activeTab = event;
